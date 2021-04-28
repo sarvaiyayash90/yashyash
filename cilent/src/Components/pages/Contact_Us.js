@@ -44,7 +44,7 @@ const Contact_Us = () => {
                 </div>
             </div>
 
-            <h1 id="find">Find Us On Map</h1>
+            <h1 id="find" className="mt-3">Find Us On Map</h1>
             <div className="find-map mt-5">
                 <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.017872460409!2d72.5703573149192!3d23.02311598495282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f466a8194f%3A0xbdcde14274fb0096!2sInfilon%20-%20Mobile%20App%20Development%20Company!5e0!3m2!1sen!2sin!4v1614169278523!5m2!1sen!2sin" width="100%" height="100%" style={{border:'0',allowfullscreen:'',loading:'lazy'}}></iframe>
             </div>
