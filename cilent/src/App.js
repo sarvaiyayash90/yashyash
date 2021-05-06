@@ -56,22 +56,22 @@ function App() {
 
   const [loading,setloading] = useState(false);
 
-  useEffect(()=>{
+  // useEffect(()=>{
       
-    setTimeout(()=>{
-      jQuery(".loader").fadeOut('slow');
-    },3000)
+  //   setTimeout(()=>{
+  //     jQuery(".loader").fadeOut('slow');
+  //   },3000)
     
-    setloading(true);
-    setTimeout(()=>{
-      setloading(false);
-    },4000)
-  },[])
+  //   setloading(true);
+  //   setTimeout(()=>{
+  //     setloading(false);
+  //   },4000)
+  // },[])
 
   return (
     <div className="App">
 
-      {
+      {/* {
         loading ?
           <div class="loader">
           <span>I</span>
@@ -82,7 +82,7 @@ function App() {
           <span>O</span>
           <span>N</span>
         </div>
-        :
+        : */}
           <Router>
             <Header/>
             <NavBar/>
@@ -127,7 +127,7 @@ function App() {
             <Footer/>
           </Router>
 
-      }
+      {/* } */}
 
       
     </div>
