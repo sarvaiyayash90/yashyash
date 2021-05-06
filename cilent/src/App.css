@@ -72,6 +72,7 @@ html,body{
   margin:0 0 0 13px;
 }
 
+
 .fab,.fas{
   color: white;
 }
@@ -130,6 +131,7 @@ html,body{
   box-shadow: 0px 0px 50px white;
   border-radius:15px;
   cursor: pointer;
+  color:#75dbb3;
   -webkit-border-radius:15px;
   -moz-border-radius:15px;
   -ms-border-radius:15px;
@@ -137,8 +139,82 @@ html,body{
 }
 
 .nav-item{
-  font-size: 23px;
+  font-size: 18.5px;
 }
+
+.dropdown-menu
+{
+  color: #000;
+  background-color: #252525;
+}
+
+.dropdown:hover>.dropdown-menu{
+  display: block;
+}
+
+.dropdown:hover>.dropdown-menu a {
+  color:#75dbb3;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+    background-color: #000;
+}
+
+/* sub menu start */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 1.5px;
+  text-align: left;
+  font-size: 17.5px;
+  display:none;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+  font-size:16px;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: 100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
 /* navbar EOF */
 
 /* slider start */
@@ -152,7 +228,7 @@ html,body{
 .carousel-item img{
   cursor: pointer;
   width: 100%;
-  height: 587px;
+  height: 590px;
   opacity: 0.7;
 }
 /* slider EOF */
@@ -962,12 +1038,1398 @@ html,body{
   height:530px;
   border: 0px solid red;
 }
-
-
-
-
 /* contact us EOF */
 
+/* Career start */
+.career-section-collapsedata
+{
+  width:100%;
+  height:auto;
+  border: 0px solid red;
+  padding:100px 100px 20px 100px;
+}
+
+.career-section-collapsedata-inside
+{
+  width:100%;
+  height:auto;
+  border: 0px solid red;
+}
+
+.career-section-collapsedata-inside a
+{
+  width: 100%;
+  background-color:#75dbb3;
+  text-align: left;
+  font-weight: bold;
+}
+
+.card
+{
+
+  border-color: #75dbb3;
+  box-shadow: 1px 4px 6px #ccc;
+}
+
+.inside
+{
+  margin: 0;
+  padding:0;
+  width:100%;
+  height:40px;
+  border:1px solid #f1f1f1;
+  background-color: #f1f1f1;
+}
+
+#php_text
+{
+  text-align: justify;
+}
+
+.mydiv {
+  margin: 0;
+  padding:0;
+  width:100%;
+  height:100%;
+  padding: 0 3px 0 3px;
+  font-weight:bold;
+  animation: myanimation 2s infinite;
+  -webkit-animation: myanimation 2s infinite;
+}
+
+@keyframes myanimation {
+  0% {background-color: #ff9900;}
+  20%{background-color:#0000ff;}
+  40%{background-color:#ff9900;}
+  60%{background-color:#0000ff;}
+  80% {background-color:#ff9900;}
+  100%{background-color:#0000ff;}
+}
+
+.career-section-apply
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border: 0px solid red;
+  padding:50px 100px 20px 100px;
+}
+
+#btnbtn
+{
+  width:150px;
+  height:50px;
+  color:white;
+  display:inherit;
+}
+
+#btnbtn:hover
+{
+  color:black;
+}
+
+/* Career EOF */
+
+/* get quotation */
+.get-quotation-certificate-form-1
+{
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  /* display: flex; */
+  padding:50px 100px 20px 100px;
+  font-size: 40px;
+  justify-content: center;
+}
+
+#Enter_name
+{
+  width:20%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op
+{
+  width:25%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op_new
+{
+  width:22%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op_call
+{
+  width:5%;
+  padding:0 0 2.5px 0;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+input,select {
+  padding:0;
+  margin:0;
+  font-weight: bold;
+  outline: none;
+  color: #75dbb3;
+  font-size:23px;
+}
+
+input:focus,select
+{
+   outline: none;
+   color: #75dbb3;
+   font-weight:bold;
+   font-size:23px;
+   font-family:Arial, Helvetica, sans-serif;
+   
+}
+
+input::placeholder,select::placeholder{
+  outline: none;
+  color: #75dbb3;
+  font-weight:bold;
+  font-size:23px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#btn-get-quotation
+{
+  width:250px;
+  height:50px;
+  color:white;
+  margin: 20px 0 20px 0;
+}
+
+#btn-get-quotation:hover
+{
+  color:black;
+}
+/* get Quotation EOF */
+
+/* start portfolio */
+.portfolio-section
+{
+  width:100%;
+  height:auto;
+  border:0px solid red;
+}
+
+.portfolio-section-btn
+{
+  width:100%;
+  height:120px;
+  border:0px solid Green;
+  /* display: flex; */
+  padding:50px 100px 20px 0px;
+}
+
+.button {
+  width: 240px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-bottom: 3px solid #75dbb3ed;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 0 20px 0 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+
+button:focus
+{
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+  -webkit-transform: translateY(-7px);
+  -moz-transform: translateY(-7px);
+  -ms-transform: translateY(-7px);
+  -o-transform: translateY(-7px);
+}
+
+.portfolio-section-box
+{
+  width:auto;
+  height:auto;
+  border:0px solid red;
+  padding:20px 180px 30px 165px;
+}
+
+.portfolio-section-box-1
+{
+  width:270px;
+  height:190px;
+  border:0px solid red;
+  padding:15px;
+  margin:0 25px 25px 0;
+}
+
+.portfolio-section-box-1 img
+{
+  width:270px;
+  height:160px;
+  border:0px solid red;
+}
+
+
+.portfolio-section-box-1 img:hover {
+  opacity: 0.4;
+}
+
+.portfolio-section-box-1 h6
+{
+  width:270px;
+  height:30px;
+  border:0px solid red;
+  background-color: #e0e1e3;
+  padding:5px 0 0 0;
+}
+/* portfolio EOF */
+
+/* who we are start */
+#prominent
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:50px 100px 50px 100px ;
+  font-size:20px;
+  font-family: monteserrat;
+  text-align:center;
+  color:#3E3E3E;
+}
+
+.who_we_are-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  display: flex;
+}
+
+#who_we_are-section-box-p-left
+{
+  padding:0;
+  margin:0;
+  padding:21px 0px 0 170px;
+  font-size:17px;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  text-align: justify;
+  color:#3E3E3E;
+}
+
+#who_we_are-section-box-p-left:hover
+{
+  font-weight: bold;
+  /* text-shadow: 2px 2px 50px #75dbb3; */
+}
+
+#who_we_are-section-box-img-right
+{
+  padding:0;
+  margin:0;
+  padding:21px 150px 0 0;
+}
+
+#who_we_are-section-box-p-right
+{
+  padding:0;
+  margin:0;
+  padding:21px 160px 0 15px;
+  font-size:17px;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  text-align: justify;
+  color:#3E3E3E;
+}
+
+#who_we_are-section-box-p-right:hover
+{
+  font-weight: bold;
+  /* text-shadow: 2px 2px 50px #75dbb3; */
+}
+
+#who_we_are-section-box-img-left
+{
+  padding:0;
+  margin:0;
+  padding:21px 0px 0 170px;
+}
+/* who we EOF */
+
+
+/* Accounting Software start */
+
+.Accounting-Software-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 120px  150px  0 150px
+}
+
+.Accounting-Software-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:17.5px;
+}
+
+.Accounting-Software-section p:hover
+{
+  font-weight: bold;
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer;
+}
+
+.Accounting-Software-section h1
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:40px;
+  font-weight: bold;
+  margin:50px 0 20px 0;
+}
+
+.Accounting-Software-section h3
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:30px;
+  margin:0px 0 50px 0;
+}
+
+#cohesive
+{
+  padding: 0px  350px  0 350px;
+}
+
+#Strategic
+{
+  padding: 0 50px 0 180px;
+}
+
+#Complimentary
+{
+  padding:0 180px 0 90px;
+}
+/* Accounting Software EOF */
+
+
+/* Billing Software start*/
+.Billing-Software-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  150px  0 150px
+}
+
+#Billing-hed
+{
+  padding: 0px  0px  70px 150px
+}
+
+#Manage
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:0px 0 50px 0;
+}
+
+.Billing-Software-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:0px 0 60px 0; 
+}
+.Billing-Software-section p:hover
+{
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer;
+}
+.Billing-Software-section b
+{
+  font-size:25px;
+}
+
+#iSoft
+{
+  margin:100px 0 50px 0;
+}
+/* Billing Software EOF */
+
+
+/* web ERP start */
+.Web-ERP-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px
+}
+
+
+.Web-ERP-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:0px 0 15px 0;
+}
+
+.Web-ERP-section p:hover
+{
+  font-weight: bold;
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer;
+}
+
+/* web ERP EOF */
+
+/* WEb CRM Start */
+.Web-CRM-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px
+}
+
+.Web-CRM-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:0px 0 15px 0;
+}
+
+.Web-CRM-section p:hover
+{
+  font-weight: bold;
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer;
+}
+/* Web CRM EOF */
+
+/* responsive design section start */
+.responsive-design-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px
+}
+
+.responsive-design-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+  margin:0px 0 15px 0;
+}
+
+.responsive-design-section p:hover
+{
+  font-weight: bold;
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer; 
+}
+
+.responsive-design-section-box
+{
+  margin:70px 0 70px 0;
+}
+
+.responsive-design-section-box:hover
+{
+  font-weight: bold;
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer; 
+}
+/* responsive design section EOF */
+
+/*  */
+
+
+/* Software Development start  */
+.software-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px
+}
+
+.software-development-section h2
+{
+  font-weight: bold;
+  margin: 0 0 50px 0;
+}
+
+.software-development-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+  margin:0px 0 15px 0;
+}
+
+.software-development-section p:hover
+{
+  font-weight: bold;
+  text-shadow: 2px 2px 50px #75dbb3;
+  cursor: pointer; 
+}
+/* Software Development EOF */
+
+/* SEO start */
+.Seo-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.Seo-section p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+  /* margin:0px 0 15px 0; */
+}
+
+.Seo-section img
+{
+  width:100%;
+  height:530px;
+  padding: 50px  200px  0 200px
+}
+
+.Engine-Optimization
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  background-color: #f1f1f1;
+  padding: 50px  200px  50px 200px
+}
+
+.Engine-Optimization p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  /* margin:0px 0 15px 0; */
+}
+
+.Engine-Optimization i
+{
+  color:#75dbb3;
+  margin: 0 0 20px 0;
+}
+
+.We-accomplish-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px  200px  50px 200px
+}
+
+.We-accomplish-section p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  /* margin:0px 0 15px 0; */
+}
+
+#we
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:50px 0 0 0;
+}
+
+#we1
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+.We-accomplish-section i
+{
+  margin:0 5px 0 0;
+}
+/* SEO END */
+
+/* Magento start */
+.Magento-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.Magento-section h2
+{
+  margin:0 0 30px 0;
+}
+
+.Magento-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Magento-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 0px  200px  0px 200px;
+}
+
+.Magento-development-section ul
+{
+  text-align: left;
+}
+
+.Magento-development-section h6
+{
+  text-align: left;
+}
+/* magento EOF */
+
+/* wordpress start */
+.Wordpress-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.Wordpress-section h2
+{
+  font-weight: bold;
+  margin:0 0 60px 0;
+}
+
+.Wordpress-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.why-we
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 0px 0 0 0;  
+}
+
+.why-we h5
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.why-we ul
+{
+  text-align: left;
+}
+/* wordpress EOf */
+
+
+/* IOT start */
+.IOT-section 
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.IOT-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.IOT-section-IOT
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 0px  200px  0px 200px;
+}
+
+.IOT-section-IOT h6
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.IOT-section-IOT ul
+{
+  text-align: left;
+  font-size: 14.5px;
+}
+/* IOT End */
+
+/* Chatbot  start */
+.Chatbot-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.Chatbot-section h2
+{
+  font-weight: bold;
+  margin:0 0 60px 0;
+}
+
+.Chatbot-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Chatbot-Development
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 0px 0 0 0;  
+}
+
+.Chatbot-Development h5
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.Chatbot-Development ul
+{
+  text-align: left;
+}
+/* Chatbot EOf */
+
+/* php-section start */
+.php-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.php-section h2
+{
+  margin:0 0 30px 0;
+}
+
+.php-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.php-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 0px  180px  0px 180px;
+}
+
+.php-development-section p
+{
+  text-align: left;
+  font-size: 18px;
+}
+.php-development-section ul
+{
+  text-align: left;
+}
+
+.php-development-section h5
+{
+  text-align: left;
+}
+/* php-section end */
+
+/* Trusted-ERP start */
+.Trusted-ERP-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.Trusted-ERP-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Trusted-ERP-section h2
+{
+  margin:90px 0 0 0;
+  font-size:30px;
+}
+/* Trusted-ERP End */
+
+/* moblie app start */
+.moblie-app-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.moblie-app-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Why-what p
+{
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size:16px;
+  /* margin:15px 0 0 0; */
+}
+/* moblie app end */
+
+/* Android app start */
+
+.android-app-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px;
+}
+
+.android-app-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.lan
+{
+  margin:50px 0 40px 0;
+}
+/* Android app end */
+
+/* IPhone and React-Native app start */
+.iPhone-section, .React-Native-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px; 
+}
+.iPhone-section p
+{
+  font-size:17.5px;
+  margin:10px 0 0 0
+}
+/* Iphone and React-Native app end */
+
+/* ionic-section start */
+.ionic-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px; 
+}
+
+.ionic-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:10px 0 0 0;
+}
+.ionic-section h5
+{
+  text-align: left;
+}
+
+.ionic-section ul
+{
+  text-align: left;
+}
+/* ionic-section end */
+
+/* flutter app start */
+.Flutter-App-section,.Flutter-App-section-Benefits
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 200px; 
+}
+
+.Flutter-App-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:18px;
+  margin:10px 0 0 0;
+}
+/* flutter app end */
+
+
+/* Hire-Developers-section start */
+
+.Hire-Developers-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  410px  80px 410px; 
+}
+
+.Hire-Developers-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.Hire-Developers-section-Benefits
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 0px  200px  80px 200px; 
+}
+
+.Hire-Developers-section-Benefits p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+.Benefits-of-Hiring
+{
+  margin:80px 0 0px 0;
+}
+.Hire-Developers-section-Benefits h4
+{
+  margin:70px 0 70px 0;
+}
+/* Hire-Developers-section end */
+
+/* Why Hire Developer start */
+.Why-Hire-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  400px  80px 400px; 
+}
+#Why-Hire-infilon
+{
+  margin:40px 0 100px 0;
+}
+
+.Why-Hire-Developer-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:16px;
+}
+/* Why Hire Developer end */
+
+/* Offshore IT Staffing start */
+.Offshore-IT-Staffing-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 100px  400px  150px 400px;
+}
+.Offshore-IT-Staffing-section h2
+{
+  margin:0 0 40px 0;
+}
+
+.Offshore-IT-Staffing-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+}
+
+#Offshore-IT-Staffing-section-at
+{
+  margin:100px 0 100px 0;
+}
+/* Offshore IT Staffing end */
+
+/* Custom-Programmer start */
+.Custom-Programmer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 0  200px  80px 200px;
+}
+
+.Custom-Programmer-section-inside
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  360px  10px 360px;
+}
+.Custom-Programmer-section-inside h1
+{
+  margin:0 0 50px 0;
+}
+
+.Custom-Programmer-section p
+{
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:16px;
+}
+.Custom-Programmer-section h3
+{
+  margin:60px 0 30px 0;
+}
+/* Custom-Programmer end */
+
+/* Asp-Net-Developer start */
+.Asp-Net-Developer-section 
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  360px  10px 360px;
+}
+
+.Asp-Net-Developer-section h3
+{
+  margin:0 0 40px 0;
+}
+
+.Asp-Net-Developer-section-infilon
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  300px  10px 300px;  
+}
+
+.Asp-Net-Developer-section-infilon p
+{
+  padding:0;
+  margin:0;
+}
+
+.Asp-Net-Developer-section-infilon h5
+{
+  padding:0;
+  margin:0 0 40px 0;
+}
+/* Asp-Net-Developer end */
+
+/* java-developer start */
+.java-developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  360px  80px 360px;
+}
+
+.java-developer-section h3
+{
+  margin:0px 0 30px 0;
+}
+
+.java-developer-section h5
+{
+  margin:70px 0 30px 0;
+}
+.java-developer-section p
+{
+  padding:0;
+  margin:0;
+}
+/* java-developer end */
+
+/* PHP Developer start */
+.PHP-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 100px  360px  100px 360px;
+}
+/* PHP Developer end */
+
+/* DBMS developer start */
+.DBMS-developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 100px  300px  100px 300px;
+}
+
+.DBMS-developer-section p
+{
+  padding:0;
+  margin:0;
+  font-size: 18px;
+}
+.DBMS-developer-section h3
+{
+  margin:40px 0 40px 0;
+}
+/* DBMS developer End */
+
+/* Joomla-Developer start */
+.Joomla-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 100px 370px 100px 370px;
+}
+
+.Joomla-Developer-section p
+{
+  padding:0;
+  margin: 0;
+  font-size:19px;
+
+}
+
+.Joomla-Developer-section h3
+{
+  margin:130px 0 50px 0;
+}
+
+#Joomla-online
+{
+  margin:0px 0 50px 0;
+}
+/* Joomla-Developer end */
+
+/* OXID-Development-section start */
+.OXID-Development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  230px  80px 230px; 
+}
+
+.OXID-Development-section h2
+{
+  margin:0 0 50px 0;
+}
+
+.OXID-Development-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:19px;
+  margin:10px 0 0 0;
+}
+
+.OXID-Development-section ul
+{
+  text-align:left;
+  font-size:17px;
+}
+
+/* OXID-Development-section end */
 
 /* =============================================================================================== */
 
@@ -1516,7 +2978,6 @@ html,body{
   padding:0px 0 0 20px;
 }
 
-/* contact us EOF */
 #find
 {
   font-weight: bold;
@@ -1533,9 +2994,1315 @@ html,body{
   height:auto;
   border: 0px solid red;
 }
+/* contact us EOF */
+
+
+/* Career start */
+.career-section-collapsedata
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border: 0px solid red;
+  padding:30px 15px 0px 15px;
+}
+
+.career-section-collapsedata-inside
+{
+  width:100%;
+  height:auto;
+  border: 0px solid red;
+}
+
+.inside
+{
+  margin: 0;
+  padding:0;
+  width:100%;
+  height:auto;
+}
+
+.career-section-apply
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border: 0px solid red;
+  /* padding:50px 100px 20px 100px; */
+  padding:30px 15px 0px 15px;
+}
+
+#btnbtn
+{
+  width:150px;
+  height:50px;
+  color:white;
+  display:inherit;
+}
+
+#btnbtn:hover
+{
+  color:black;
+}
+/* Career EOF */
+
+
+/* get quotation */
+.get-quotation-certificate-form-1
+{
+  padding: 0;
+  margin: 0;
+  padding: 20px 0 0 0;
+  padding: 2px;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  /* display: flex; */
+  font-size: 17px;
+  justify-content: center;
+}
+
+#Enter_name
+{
+  width:20%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op
+{
+  width:25%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op_new
+{
+  width:22%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op_call
+{
+  width:auto;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+input,select {
+  font-weight: bold;
+  outline: none;
+  color: #75dbb3;
+  font-size:17px;
+}
+
+input:focus,select
+{
+   font-size:17px;
+   
+}
+
+input::placeholder,select::placeholder{
+  font-size:17px;
+}
+
+#btn-get-quotation
+{
+  width:auto;
+  height:auto;
+  margin: 20px 0 20px 0;
+}
+
+#btn-get-quotation:hover
+{
+  color:black;
+}
+/* get Quotation EOF */
+
+
+/* start portfolio */
+.portfolio-section
+{
+  padding: 0;
+  margin: 0;
+  width:100%;
+  height:auto;
+}
+
+.portfolio-section-btn
+{
+  padding: 0;
+  margin: 0;
+  width:100%;
+  height:auto;
+  border:0px solid Green;
+  display: flex;
+  padding:20px 10px 10px 15px;
+}
+
+
+.button {
+  padding:2px 6px;
+  width: 100%;
+  height: auto;
+  font-size: 9.5px;
+}
+
+button:focus
+{
+  width: 100%;
+  height: auto;
+  font-size:15px;
+}
+
+.portfolio-section-box
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:0 0 0 20px;
+  /* padding:20px 180px 30px 180px; */
+}
+
+.portfolio-section-box-1
+{
+  width:100%;
+  height:190px;
+  border:0px solid red;
+  padding:15px;
+  margin:0 25px 25px 0;
+}
+
+.portfolio-section-box-1 img
+{
+  width:100%;
+  height:160px;
+  border:0px solid red;
+}
+
+.portfolio-section-box-1 h6
+{
+  width:100%;
+  height:30px;
+  border:0px solid red;
+  background-color: #e0e1e3;
+}
+
+/* portfolio EOF */
+
+/* who we are start */
+#prominent
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:15px;
+  border:0px solid red;
+  font-size:18px;
+}
+
+.who_we_are-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  display: inherit;
+}
+
+#who_we_are-section-box-p-left
+{
+  padding:0;
+  margin:0;
+  padding: 4px;
+  font-size:15px;
+}
+
+#who_we_are-section-box-img-right
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:4px 4px 40px 4px;
+}
+
+#who_we_are-section-box-p-right
+{
+  padding:0;
+  margin:0;
+  /* padding:21px 160px 0 15px; */
+  padding: 4px;
+  font-size:15px;
+}
+
+#who_we_are-section-box-img-left
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:4px;
+  /* padding:21px 0px 0 170px; */
+}
+/* who we EOF */
+
+/* Accounting Software start */
+
+.Accounting-Software-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+}
+
+.Accounting-Software-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:17.5px;
+}
+
+.Accounting-Software-section h1
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:35px;
+  font-weight: bold;
+  margin:20px 0 20px 0;
+}
+
+.Accounting-Software-section h3
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:25px;
+  margin:0px 10px 0px 10px;
+}
+
+#cohesive
+{
+  padding:20px;
+}
+
+#Strategic
+{
+  padding:20px;
+  /* padding: 0 50px 0 180px; */
+}
+
+#Complimentary
+{
+  padding:20px;
+  /* padding:0 180px 0 90px; */
+}
+
+/* Accounting Software EOF */
+
+/* Billing Software start*/
+.Billing-Software-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  /* padding: 80px  150px  0 150px */
+}
+
+#Billing-hed
+{
+  padding:0;
+  margin:0;
+  font-size: 28px;
+  padding: 10px
+}
+
+#iSoft
+{
+  margin:30px 0 0px 0;
+  font-size: 28px;
+  padding: 10px
+}
+
+#Manage
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;  
+  color:#665e5e;
+  font-size:18px;
+  margin:10px;
+}
+
+.Billing-Software-section p
+{
+  padding:0;
+  margin:0;
+  font-size:18px;
+}
+
+.Billing-Software-section b
+{
+  font-size:22px;
+}
+/* Billing Software EOF */
+
+/* web ERP start */
+.Web-ERP-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+
+.Web-ERP-section p
+{
+  margin:0px 0 20px 0;
+  text-align: justify;
+}
+
+/* web ERP EOF */
+
+/* WEb CRM Start */
+.Web-CRM-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.Web-CRM-section p
+{
+  text-align: justify;
+  margin:0px 0 20px 0;
+}
+/* Web CRM EOF */
+
+/* responsive-design start */
+.responsive-design-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.responsive-design-section h1
+{
+  font-size:22px;
+}
+
+.responsive-design-section p
+{
+  text-align: justify;
+}
+.responsive-design-section-box
+{
+  margin:25px 0 25px 0;
+}
+/* responsive-design EOF */
+
+/* Software Development start  */
+.software-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.software-development-section h2
+{
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  font-size:25px;
+}
+
+.software-development-section p
+{
+  text-align: justify;
+  margin:0px 0 15px 0;
+}
+/* Software Development EOF */
+
+
+/* SEO start */
+.Seo-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.Seo-section h2
+{
+  font-size:25px;
+  font-weight: bold;
+}
+
+.Seo-section p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+}
+
+.Seo-section img
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+}
+
+.Engine-Optimization
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.Engine-Optimization h2
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:25px;
+  font-weight: bold;
+}
+
+.Engine-Optimization p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+}
+
+.Engine-Optimization i
+{
+  padding:0;
+  color:#75dbb3;
+  margin: 0 0 20px 0;
+}
+
+.We-accomplish-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.We-accomplish-section h2
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:35px;
+  font-weight: bold;
+}
+
+.We-accomplish-section p
+{
+  font-size:18px;
+}
+
+#we
+{
+  margin:20px 0 0 0;
+}
+
+#we1
+{
+  margin:10px 0 0 0;
+}
+.We-accomplish-section i
+{
+  margin:0 5px 0 0;
+}
+/* SEO END */
+
+/* Magento start */
+.Magento-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px;
+  /* padding: 80px  200px  80px 200px; */
+}
+
+.Magento-section h2
+{
+  font-size: 25px;
+  margin:0 0 30px 0;
+}
+
+.Magento-section p
+{
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Magento-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:10px;
+}
+/* magento EOF */
+
+
+/* wordpress start */
+.Wordpress-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.Wordpress-section h2
+{
+  font-size:25px;
+  margin:0 0 20px 0;
+}
+
+.Wordpress-section p
+{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.why-we
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+}
+
+.why-we h5
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.why-we ul
+{
+  text-align: justify;
+}
+/* wordpress EOf */
+
+/* IOT start */
+.IOT-section 
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.IOT-section h2
+{
+  text-align: center;
+  font-size:22px;
+  font-weight: bold;
+}
+
+.IOT-section p
+{
+  text-align: justify;
+  font-size:16px;
+}
+
+.IOT-section-IOT
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+}
+
+.IOT-section-IOT h6
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.IOT-section-IOT ul
+{
+  text-align: left;
+  font-size: 14.5px;
+}
+/* IOT End */
+
+
+/* Chatbot  start */
+.Chatbot-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.Chatbot-section h2
+{
+  font-size:25px;
+  margin:0 0 20px 0;
+}
+
+.Chatbot-section p
+{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.Chatbot-Development
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+}
+
+.Chatbot-Development h5
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.Chatbot-Development ul
+{
+  text-align: justify;
+}
+/* Chatbot EOf */
+
+/* php-section start */
+.php-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.php-section h2
+{
+  font-size:25px;
+  margin:0 0 30px 0;
+}
+
+.php-section p
+{
+  text-align: justify;
+  font-size:16px;
+  margin:15px 0 0 0;
+}
+
+.php-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 5px;
+}
+
+.php-development-section p
+{
+  padding:0;
+  margin:0;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.php-development-section ul
+{
+  
+  text-align: left;
+}
+
+.php-development-section h5
+{
+  text-align: left;
+}
+/* php-section end */
+
+/* Trusted-ERP start */
+.Trusted-ERP-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px;
+}
+
+.Trusted-ERP-section p
+{
+  text-align: justify;
+  font-size:16px;
+  margin:15px 0 0 0;
+}
+
+.Trusted-ERP-section h2
+{
+  margin:20px 0 0 0;
+  font-size:30px;
+}
+/* Trusted-ERP End */
+
+/* moblie app start */
+.moblie-app-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.moblie-app-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Why-what p
+{
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size:16px;
+  /* margin:15px 0 0 0; */
+}
+/* moblie app end */
+
+/* Android app start */
+
+.android-app-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.android-app-section p
+{
+  text-align: justify;
+  margin:10px 0 0 0;
+}
+
+.lan
+{
+  margin:20px 0 10px 0;
+}
+/* Android app end */
+
+/* IPhone and React-Native app start */
+
+.iPhone-section, .React-Native-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px;
+}
+
+.iPhone-section p, .React-Native-section p
+{
+  text-align: justify;
+  font-size:17.5px;
+  margin:10px 0 0 0
+}
+.React_Native h2
+{
+  padding:0;
+  margin:0;
+  text-align: center;
+  font-size:25px;
+}
+/* Iphone and React-Native app end */
+
+/* ionic-section start */
+.ionic-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.ionic-section h2
+{
+  font-size:20px;
+}
+.ionic-section p
+{
+  text-align: justify;
+  font-size:17px;
+}
+.ionic-section h5
+{
+  text-align: left;
+}
+
+.ionic-section ul
+{
+  text-align: left;
+}
+/* ionic-section end */
+
+/* flutter app start */
+.Flutter-App-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.Flutter-App-section-Benefits
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:0 0 0 5px;
+}
+
+.Flutter-App-section h2
+{
+  font-size:28px;
+}
+
+.Flutter-App-section h3
+{
+  font-size:21px;
+}
+
+.Flutter-App-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:18px;
+  margin:10px 0 0 0;
+}
+/* flutter app end */
+
+/* Hire-Developers-section start */
+
+.Hire-Developers-section,.Hire-Developers-section-Benefits
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.Hire-Developers-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.Hire-Developers-section-Benefits p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.Hire-Developers-section-Benefits h3
+{
+  font-size:25px;
+}
+
+.Benefits-of-Hiring
+{
+  padding:0;
+  margin:0;
+}
+
+.Hire-Developers-section-Benefits h4
+{
+  margin:20px 0 20px 0;
+}
+/* Hire-Developers-section end */
+
+
+/* Why Hire Developer start */
+.Why-Hire-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+#Why-Hire-infilon
+{
+  margin:20px 0 20px 0;
+}
+
+.Why-Hire-Developer-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:16px;
+}
+/* Why Hire Developer end */
+
+/* Offshore IT Staffing start */
+.Offshore-IT-Staffing-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+.Offshore-IT-Staffing-section h2
+{
+  margin:0 0 20px 0;
+}
+
+.Offshore-IT-Staffing-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:16px;
+}
+
+#Offshore-IT-Staffing-section-at
+{
+  margin:50px 0 50px 0;
+}
+/* Offshore IT Staffing end */
+
+/* Custom-Programmer start */
+.Custom-Programmer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:0 20px 20px 20px;
+}
+
+.Custom-Programmer-section-inside
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px 20px 0 20px;
+}
+
+.Custom-Programmer-section-inside h1
+{
+  font-size:30px;
+  margin:0 0 20px 0;
+}
+
+.Custom-Programmer-section-inside p
+{
+  text-align: justify; 
+}
+
+.Custom-Programmer-section p
+{
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:16px;
+}
+.Custom-Programmer-section h3
+{
+  font-size: 20px;
+  margin:30px 0 15px 0;
+}
+/* Custom-Programmer end */
+
+
+/* Asp-Net-Developer start */
+.Asp-Net-Developer-section 
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  /* padding: 80px  360px  10px 360px; */
+  padding:50px 20px 0px 20px;
+}
+
+.Asp-Net-Developer-section h3
+{
+  margin:0 0 20px 0;
+}
+
+.Asp-Net-Developer-section p
+{
+  text-align:justify;
+  font-size: 16px;
+}
+
+.Asp-Net-Developer-section-infilon
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 30px 20px 80px 20px;  
+}
+
+.Asp-Net-Developer-section-infilon p
+{
+  text-align: center;
+  padding:0;
+  margin:0;
+  font-size: 16px;
+}
+
+.Asp-Net-Developer-section-infilon h5
+{
+  padding:0;
+  margin:0 0 40px 0;
+}
+/* Asp-Net-Developer end */
+
+/* java-developer start */
+.java-developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 30px 20px 80px 20px; 
+}
+
+.java-developer-section h3
+{
+  margin:0px 0 30px 0;
+}
+
+.java-developer-section h5
+{
+  margin:40px 0 20px 0;
+}
+#java-developer-text
+{
+  text-align:center;
+}
+.java-developer-section p
+{
+  padding:0;
+  margin:0;
+  text-align: justify;
+}
+/* java-developer end */
+
+/* PHP Developer start */
+.PHP-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.PHP-Developer-section p
+{
+  text-align: justify;
+}
+
+/* PHP Developer end */
+
+/* DBMS developer start */
+.DBMS-developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.DBMS-developer-section p
+{
+  padding:0;
+  margin:0;
+  font-size: 16px;
+  text-align:justify;
+}
+
+#DBMS-developer-Providing
+{
+  text-align:center;
+}
+
+.DBMS-developer-section h3
+{
+  font-size: 25px;
+  margin:20px 0 20px 0;
+}
+/* DBMS developer End */
+
+/* Joomla-Developer start */
+.Joomla-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.Joomla-Developer-section p
+{
+  padding:0;
+  margin: 0;
+  font-size:16px;
+  text-align: justify; 
+}
+
+.Joomla-Developer-section h3
+{
+  font-size: 25px;
+  margin:40px 0 40px 0;
+}
+
+#Joomla-Developer-text
+{
+  text-align: center;
+}
+#Joomla-online
+{
+  text-align: center;
+  margin:0px 0 40px 0;
+}
+/* Joomla-Developer end */
+
+/* OXID-Development-section start */
+.OXID-Development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.OXID-Development-section h2
+{
+  font-size: 30px;
+  margin:0 0 20px 0;
+}
+
+.OXID-Development-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.OXID-Development-section ul
+{
+  text-align:left;
+  font-size:15px;
+}
+
+/* OXID-Development-section end */
 
 
 }
+
+
+
+
 /* .Main-section-footer-inside-icon 
 {
   padding:0;
@@ -2107,6 +4874,1239 @@ html,body{
   padding:0px 0 0 20px;
 }
 /* contact us EOF */
+
+/* get quotation */
+.get-quotation-certificate-form-1
+{
+  padding: 0;
+  margin: 0;
+  padding: 2px;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px 0 0 0;
+  /* display: flex; */
+  font-size: 17px;
+  justify-content: center;
+}
+
+#Enter_name
+{
+  width:20%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op
+{
+  width:25%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op_new
+{
+  width:22%;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+#select_op_call
+{
+  width:auto;
+  height:auto;
+  border:none;
+  border-bottom:2px dashed #75dbb3;
+}
+
+input,select {
+  font-weight: bold;
+  outline: none;
+  color: #75dbb3;
+  font-size:17px;
+}
+
+input:focus,select
+{
+   font-size:17px;
+   
+}
+
+input::placeholder,select::placeholder{
+  font-size:17px;
+}
+
+#btn-get-quotation
+{
+  width:auto;
+  height:auto;
+  margin: 20px 0 20px 0;
+}
+
+#btn-get-quotation:hover
+{
+  color:black;
+}
+/* get Quotation EOF */
+
+/* start portfolio */
+.portfolio-section
+{
+  padding: 0;
+  margin: 0;
+  width:100%;
+  height:auto;
+}
+
+.portfolio-section-btn
+{
+  padding: 0;
+  margin: 0;
+  width:100%;
+  height:auto;
+  border:0px solid Green;
+  display: flex;
+  padding:20px 10px 10px 15px;
+}
+
+
+.button {
+  padding:2px 6px;
+  width: 100%;
+  height: auto;
+  font-size: 15px;
+}
+
+button:focus
+{
+  width: 100%;
+  height: auto;
+  font-size:15px;
+}
+
+.portfolio-section-box
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:0 0 0 20px;
+  /* padding:20px 180px 30px 180px; */
+}
+
+.portfolio-section-box-1
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:10px;
+  margin:0 25px 0px 0;
+}
+
+.portfolio-section-box-1 img
+{
+  width:100%;
+  height:240px;
+  border:0px solid red;
+}
+
+.portfolio-section-box-1 h6
+{
+  width:100%;
+  height:40px;
+  padding:10px 0 0 0;
+  border:0px solid red;
+  background-color: #e0e1e3;
+}
+
+/* portfolio EOF */
+
+/* who we are start */
+#prominent
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:15px;
+  border:0px solid red;
+  font-size:18px;
+}
+
+.who_we_are-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  display: inherit;
+}
+
+#who_we_are-section-box-p-left
+{
+  padding:0;
+  margin:0;
+  padding: 4px;
+  font-size:15px;
+}
+
+#who_we_are-section-box-img-right
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:4px 4px 40px 4px;
+}
+
+#who_we_are-section-box-p-right
+{
+  padding:0;
+  margin:0;
+  /* padding:21px 160px 0 15px; */
+  padding: 4px;
+  font-size:15px;
+}
+
+#who_we_are-section-box-img-left
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:4px;
+  /* padding:21px 0px 0 170px; */
+}
+/* who we EOF */
+
+/* Accounting Software start */
+
+.Accounting-Software-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+} 
+
+.Accounting-Software-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:17.5px;
+}
+
+.Accounting-Software-section h1
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:35px;
+  font-weight: bold;
+  margin:20px 0 20px 0;
+}
+
+.Accounting-Software-section h3
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#494343;
+  font-size:25px;
+  margin:0px 10px 0px 10px;
+}
+
+#cohesive
+{
+  padding:20px;
+}
+
+#Strategic
+{
+  padding:20px;
+  /* padding: 0 50px 0 180px; */
+}
+
+#Complimentary
+{
+  padding:20px;
+  /* padding:0 180px 0 90px; */
+}
+
+/* Accounting Software EOF */
+
+
+/* Billing Software start*/
+.Billing-Software-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  /* padding: 80px  150px  0 150px */
+}
+
+#Billing-hed
+{
+  padding:0;
+  margin:0;
+  font-size: 28px;
+  padding: 10px
+}
+
+#iSoft
+{
+  margin:30px 0 0px 0;
+  font-size: 28px;
+  padding: 10px
+}
+
+#Manage
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;  
+  color:#665e5e;
+  font-size:18px;
+  margin:10px;
+}
+
+.Billing-Software-section p
+{
+  padding:0;
+  margin:0;
+  font-size:18px;
+}
+
+.Billing-Software-section b
+{
+  font-size:22px;
+}
+/* Billing Software EOF */
+
+/* web ERP start */
+.Web-ERP-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+
+.Web-ERP-section p
+{
+  margin:0px 0 20px 0;
+}
+
+/* web ERP EOF */
+
+
+/* WEb CRM Start */
+.Web-CRM-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.Web-CRM-section p
+{
+  text-align: justify;
+  margin:0px 0 20px 0;
+}
+/* Web CRM EOF */
+
+/* responsive website design start */
+.responsive-design-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.responsive-design-section h1
+{
+  font-size:22px;
+}
+
+.responsive-design-section p
+{
+  text-align: justify;
+}
+.responsive-design-section-box
+{
+  margin:25px 0 25px 0;
+}
+/* responsive website design EOF  */
+
+
+/* Software Development start  */
+.software-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.software-development-section h2
+{
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  font-size:25px;
+}
+
+.software-development-section p
+{
+  text-align: justify;
+  margin:0px 0 15px 0;
+}
+/* Software Development EOF */
+
+
+
+/* SEO start */
+.Seo-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.Seo-section h2
+{
+  font-size:30px;
+  font-weight: bold;
+}
+
+.Seo-section p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:18px;
+}
+
+.Seo-section img
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+}
+
+.Engine-Optimization
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.Engine-Optimization h2
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:30px;
+  font-weight: bold;
+}
+
+.Engine-Optimization p
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+}
+
+.Engine-Optimization i
+{
+  padding:0;
+  color:#75dbb3;
+  margin: 0 0 20px 0;
+}
+
+.We-accomplish-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.We-accomplish-section h2
+{
+  padding:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:35px;
+  font-weight: bold;
+}
+
+.We-accomplish-section p
+{
+  font-size:18px;
+}
+
+#we
+{
+  margin:20px 0 0 0;
+}
+
+#we1
+{
+  margin:10px 0 0 0;
+}
+.We-accomplish-section i
+{
+  margin:0 5px 0 0;
+}
+/* SEO END */
+
+/* Magento start */
+.Magento-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px;
+  /* padding: 80px  200px  80px 200px; */
+}
+
+.Magento-section h2
+{
+  font-size: 25px;
+  margin:0 0 30px 0;
+}
+
+.Magento-section p
+{
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Magento-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:10px;
+}
+/* magento EOF */
+
+/* wordpress start */
+.Wordpress-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.Wordpress-section h2
+{
+  font-size:25px;
+  margin:0 0 20px 0;
+}
+
+.Wordpress-section p
+{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.why-we
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+}
+
+.why-we h5
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.why-we ul
+{
+  text-align: justify;
+}
+/* wordpress EOf */
+
+/* IOT start */
+.IOT-section 
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.IOT-section h2
+{
+  text-align: center;
+  font-size:22px;
+  font-weight: bold;
+}
+
+.IOT-section p
+{
+  text-align: justify;
+  font-size:16px;
+}
+
+.IOT-section-IOT
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+}
+
+.IOT-section-IOT h6
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.IOT-section-IOT ul
+{
+  text-align: left;
+  font-size: 14.5px;
+}
+/* IOT End */
+
+/* Chatbot  start */
+.Chatbot-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.Chatbot-section h2
+{
+  font-size:25px;
+  margin:0 0 20px 0;
+}
+
+.Chatbot-section p
+{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.Chatbot-Development
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+}
+
+.Chatbot-Development h5
+{
+  font-size: 20px;
+  text-align: left;
+}
+
+.Chatbot-Development ul
+{
+  text-align: justify;
+}
+/* Chatbot EOf */
+
+/* php-section start */
+.php-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.php-section h2
+{
+  font-size:25px;
+  margin:0 0 30px 0;
+}
+
+.php-section p
+{
+  text-align: justify;
+  font-size:16px;
+  margin:15px 0 0 0;
+}
+
+.php-development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 5px;
+}
+
+.php-development-section p
+{
+  padding:0;
+  margin:0;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.php-development-section ul
+{
+  
+  text-align: left;
+}
+
+.php-development-section h5
+{
+  text-align: left;
+}
+/* php-section end */
+
+
+/* Trusted-ERP start */
+.Trusted-ERP-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px;
+}
+
+.Trusted-ERP-section p
+{
+  text-align: justify;
+  font-size:16px;
+  margin:15px 0 0 0;
+}
+
+.Trusted-ERP-section h2
+{
+  margin:20px 0 0 0;
+  font-size:30px;
+}
+/* Trusted-ERP End */
+
+/* moblie app start */
+.moblie-app-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.moblie-app-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:18px;
+  margin:15px 0 0 0;
+}
+
+.Why-what p
+{
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size:16px;
+  /* margin:15px 0 0 0; */
+}
+/* moblie app end */
+
+/* Android app start */
+
+.android-app-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.android-app-section p
+{
+  text-align: justify;
+  margin:10px 0 0 0;
+}
+
+.lan
+{
+  margin:20px 0 10px 0;
+}
+
+/* Android app end */
+
+/* IPhone and React-Native app start */
+
+.iPhone-section, .React-Native-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 20px;
+}
+
+.iPhone-section p, .React-Native-section p
+{
+  text-align: justify;
+  font-size:17.5px;
+  margin:10px 0 0 0
+}
+.React_Native h2
+{
+  padding:0;
+  margin:0;
+  text-align: center;
+  font-size:25px;
+}
+/* Iphone and React-Native app end */
+
+
+/* ionic-section start */
+.ionic-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+
+.ionic-section h2
+{
+  font-size:20px;
+}
+.ionic-section p
+{
+  text-align: justify;
+  font-size:17px;
+}
+.ionic-section h5
+{
+  text-align: left;
+}
+
+.ionic-section ul
+{
+  text-align: left;
+}
+/* ionic-section end */
+
+/* flutter app start */
+.Flutter-App-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 20px;
+}
+
+.Flutter-App-section-Benefits
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:0 0 0 5px;
+}
+
+.Flutter-App-section h2
+{
+  font-size:28px;
+}
+
+.Flutter-App-section h3
+{
+  font-size:21px;
+}
+
+.Flutter-App-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:18px;
+  margin:10px 0 0 0;
+}
+/* flutter app end */
+
+/* Hire-Developers-section start */
+.Hire-Developers-section,.Hire-Developers-section-Benefits
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+
+.Hire-Developers-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.Hire-Developers-section-Benefits p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.Hire-Developers-section-Benefits h3
+{
+  font-size:25px;
+}
+
+.Benefits-of-Hiring
+{
+  padding:0;
+  margin:0;
+}
+
+.Hire-Developers-section-Benefits h4
+{
+  margin:20px 0 20px 0;
+}
+/* Hire-Developers-section end */
+
+/* Why Hire Developer start */
+.Why-Hire-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding:20px;
+}
+#Why-Hire-infilon
+{
+  margin:20px 0 20px 0;
+}
+
+.Why-Hire-Developer-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:16px;
+}
+/* Why Hire Developer end */
+
+/* Offshore IT Staffing start */
+.Offshore-IT-Staffing-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px;
+}
+.Offshore-IT-Staffing-section h2
+{
+  margin:0 0 20px 0;
+}
+
+.Offshore-IT-Staffing-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:16px;
+}
+
+#Offshore-IT-Staffing-section-at
+{
+  margin:50px 0 50px 0;
+}
+/* Offshore IT Staffing end */
+
+/* Custom-Programmer start */
+.Custom-Programmer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:0 20px 20px 20px;
+}
+
+.Custom-Programmer-section-inside
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding:20px 20px 0 20px;
+}
+
+.Custom-Programmer-section-inside h1
+{
+  font-size:30px;
+  margin:0 0 20px 0;
+}
+
+.Custom-Programmer-section-inside p
+{
+  text-align: justify; 
+}
+
+.Custom-Programmer-section p
+{
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:16px;
+}
+.Custom-Programmer-section h3
+{
+  font-size: 20px;
+  margin:30px 0 15px 0;
+}
+/* Custom-Programmer end */
+
+/* Asp-Net-Developer start */
+.Asp-Net-Developer-section 
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  /* padding: 80px  360px  10px 360px; */
+  padding:50px 20px 0px 20px;
+}
+
+.Asp-Net-Developer-section h3
+{
+  margin:0 0 20px 0;
+}
+
+.Asp-Net-Developer-section p
+{
+  text-align:justify;
+  font-size: 16px;
+}
+
+.Asp-Net-Developer-section-infilon
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 30px 20px 80px 20px;  
+}
+
+.Asp-Net-Developer-section-infilon p
+{
+  text-align: center;
+  padding:0;
+  margin:0;
+  font-size: 16px;
+}
+
+.Asp-Net-Developer-section-infilon h5
+{
+  padding:0;
+  margin:0 0 40px 0;
+}
+/* Asp-Net-Developer end */
+
+/* java-developer start */
+.java-developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 30px 20px 80px 20px; 
+}
+
+.java-developer-section h3
+{
+  margin:0px 0 30px 0;
+}
+
+.java-developer-section h5
+{
+  margin:40px 0 20px 0;
+}
+#java-developer-text
+{
+  text-align:center;
+}
+.java-developer-section p
+{
+  padding:0;
+  margin:0;
+  text-align: justify;
+}
+/* java-developer end */
+
+/* DBMS developer start */
+.DBMS-developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.DBMS-developer-section p
+{
+  padding:0;
+  margin:0;
+  font-size: 16px;
+  text-align:justify;
+}
+
+#DBMS-developer-Providing
+{
+  text-align:center;
+}
+
+.DBMS-developer-section h3
+{
+  font-size: 25px;
+  margin:20px 0 20px 0;
+}
+/* DBMS developer End */
+/* Joomla-Developer start */
+.Joomla-Developer-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.Joomla-Developer-section p
+{
+  padding:0;
+  margin: 0;
+  font-size:16px;
+  text-align: justify; 
+}
+
+.Joomla-Developer-section h3
+{
+  font-size: 25px;
+  margin:40px 0 40px 0;
+}
+
+#Joomla-Developer-text
+{
+  text-align: center;
+}
+#Joomla-online
+{
+  text-align: center;
+  margin:0px 0 40px 0;
+}
+/* Joomla-Developer end */
+
+
+/* OXID-Development-section start */
+.OXID-Development-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.OXID-Development-section h2
+{
+  font-size: 30px;
+  margin:0 0 20px 0;
+}
+
+.OXID-Development-section p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+.OXID-Development-section ul
+{
+  text-align:left;
+  font-size:15px;
+}
+
+/* OXID-Development-section end */
 
 /* .Main-section-footer-inside-icon 
 {

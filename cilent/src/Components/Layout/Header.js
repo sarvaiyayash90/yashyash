@@ -21,7 +21,7 @@ const Header = () =>{
         </ul>
       </div>
       <div className="col-md-4">
-        <NavLink id="home" className="nav-link" exact to="/"><img src="/Images/logo.png" width="281" height="81"></img></NavLink>
+        <NavLink id="home" className="nav-link" exact to={"/"}><img src="/Images/logo.png" width="281" height="81"></img></NavLink>
       </div>
       <div className="col-md-4 searchicon">
         <a href="https://www.google.com"><i class="fas fa-search"></i></a>
