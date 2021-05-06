@@ -255,7 +255,7 @@ const Section = () =>{
 
         <div className="Main-section-sm">
           <div className="Main-section-sm-inside">
-              <img src="/Images/sm/1.png" />
+              <img src="/Images/social-icons/Logo1.png" />
               <p className="mt-4">
                     Sales<br></br>
                 +91 95100 16999<br></br>
@@ -263,15 +263,15 @@ const Section = () =>{
               </p>
           </div>
           <div className="Main-section-sm-inside">
-              <img src="/Images/sm/2.png" />
+              <img src="/Images/social-icons/Logo2.png" />
               <p className="mt-4">info@infilon.com</p>
           </div>
           <div className="Main-section-sm-inside">
-              <img src="/Images/sm/3.png" />
+              <img src="/Images/social-icons/Logo3.png" />
               <p className="mt-4">infilon</p>
           </div>
           <div className="Main-section-sm-inside">
-              <img src="/Images/sm/4.png" />
+              <img src="/Images/social-icons/Logo4.png" />
               <p className="mt-4">
                   Service<br></br>
               +91 9099 830 350<br></br>

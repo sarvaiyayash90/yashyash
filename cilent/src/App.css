@@ -46,6 +46,126 @@ html,body{
   overflow-x: hidden;
 }
 
+/* page load start */
+
+/* 
+.cssloader {
+  height:753px;
+  background:#333;
+  padding-top: calc(45vh - 25px);
+}
+
+.sh1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #354952 transparent transparent transparent;
+  margin: 0 auto;
+  animation: shk1 1s ease-in-out infinite normal;
+}
+
+.sh2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent  transparent #df1a54 transparent ;
+  margin: -50px auto 0;
+  animation: shk2 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes shk1 {
+  0% {
+    transform: rotate(-360deg);
+  }  
+  
+  100% {
+  }
+}
+
+@keyframes shk2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+  }
+}
+
+.lt {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 10px;
+} */
+.loader{
+	-webkit-perspective:700px;
+	perspective: 700px;
+  background-color: #75dbb3;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width:100vw;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader>span{
+	font-size: 130px;
+	font-family: "franklin gothic medium",sans-serif;
+	display: inline-block;
+	animation:flip 2.6s infinite linear;
+	transform-origin:0 70%;
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+}
+
+@keyframes flip{
+	35%{
+		transform: rotateX(360deg);
+	}
+	100%{
+		transform: rotatex(360deg);
+	}
+}
+
+
+.loader>span:nth-child(even){
+	color:white;
+
+}
+
+.loader>span:nth-child(2){
+	animation-delay: 0.3s;
+}
+
+.loader>span:nth-child(3){
+	animation-delay: 0.6s;
+}
+
+.loader>span:nth-child(4){
+	animation-delay: 0.9s;
+}
+
+.loader>span:nth-child(5){
+	animation-delay: 1.2s;
+}
+
+.loader>span:nth-child(6){
+	animation-delay: 1.5s
+}
+
+.loader>span:nth-child(7){
+	animation-delay: 1.8s
+}
+/* page load end */
+
+
+
 
 /* header start */
 .navbar{
@@ -2436,6 +2556,12 @@ button:focus
 /* section end */
 @media only screen and (max-width: 768px) {
 
+  /* load page start */
+  .loader>span{
+    font-size: 80px;
+  }
+
+  /* load page end */
   /* Header start */
   .navbar{
     background: cadetblue;
@@ -4329,6 +4455,12 @@ button:focus
 
 /* 1024 screen media query */
 @media only screen and (max-width: 1024px) {
+
+
+   /* load page start */
+   .loader>span{
+    font-size: 100px;
+  }
 
   /* Header start */
   .navbar{

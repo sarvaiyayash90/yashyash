@@ -1,3 +1,6 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 const Footer = () => {
     return (  
         <div className="">
@@ -14,52 +17,82 @@ const Footer = () => {
                     <p>Quick Links</p><i class="fal fa-horizontal-rule fa-2x" style={{fontSize:'60px'}}></i>
                     <ul>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Responsive_Website_Design`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Responsive Website Design
+                            </NavLink> */}
+                            <a href="/Responsive_Website_Design" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Responsive Website Design
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Android_App`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Android App Development
+                            </NavLink> */}
+                            <a href="/Android_App" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Android App Development
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Ios_App`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;iPhone App Development
+                            </NavLink> */}
+                            <a href="/Ios_App" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> iPhone App Development
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Mobile_App`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Mobile App Development
+                            </NavLink> */}
+                            <a href="/Mobile_App" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Mobile App Development
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/SEO`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;SEO Company in Ahmedabad
+                            </NavLink> */}
+                            <a href="/SEO" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Top SEO Company in Ahmedabad
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Software_Development`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Software Development
+                            </NavLink> */}
+                            <a href="/Software_Development" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Software Development
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Ecommerce Services
+                            </NavLink> */}
+                            <a href="/" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Ecommerce Services
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Open Source Development
+                            </NavLink> */}
+                            <a href="/" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Open Source Development
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Web_ERP`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;ERP Software Solutions
+                            </NavLink> */}
+                            <a href="/Web_ERP" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> ERP Software Solutions
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/React_Native_App`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;React Native Development
+                            </NavLink> */}
+                            <a href="/React_Native_App" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> React Native Development
                             </a>
                         </li>
@@ -69,56 +102,89 @@ const Footer = () => {
                     <i id="data-link" class="fal fa-horizontal-rule fa-2x" style={{fontSize:'60px'}}></i>
                     <ul>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Accounting_Software`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Accounting Software
+                            </NavLink> */}
+                            <a href="/Accounting_Software" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Accounting Software
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Billing_Software`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Billing Software
+                            </NavLink> */}
+                            <a href="/Billing_Software" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Billing Software
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Web_ERP`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Web ERP
+                            </NavLink> */}
+                            <a href="/Web_ERP" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Web ERP
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Web_CRM`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Web CRM
+                            </NavLink> */}
+                            <a href="/Web_CRM" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Web CRM
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Hire_Developers`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Hire Developer
+                            </NavLink> */}
+                            <a href="/Hire_Developers" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Hire Developer
                             </a>
                         </li>
                         <li>
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Domain & Hosting
+                            </NavLink> */}
                             <a href="" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Domain & Hosting
                             </a>
                         </li>
                         <li>
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Bulk SMS & Email
+                            </NavLink> */}
                             <a href="" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Bulk SMS & Email
                             </a>
                         </li>
                         <li>
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Employee policy
+                            </NavLink> */}
                             <a href="" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Employee policy
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Career`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Career
+                            </NavLink> */}
+                            <a href="/Career" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Career
                             </a>
                         </li>
                         <li>
-                            <a href="" style={{textDecoration:'none'}} >
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/Portfolio`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Portfolio
+                            </NavLink> */}
+                            <a href="/Portfolio" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Portfolio
                             </a>
                         </li>
                         <li>
+                            {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
+                                <i class="fal fa-chevron-right"></i>&nbsp;Blog
+                            </NavLink> */}
                             <a href="" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Blog
                             </a>

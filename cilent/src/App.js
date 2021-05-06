@@ -1,4 +1,7 @@
 //import logo from './logo.svg';
+
+import React,{useState,useEffect} from 'react';
+
 import './App.css';
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'; // route
@@ -47,56 +50,86 @@ import DBMS_Developer from './Components/pages/DBMS_Developer';
 import Joomla_Developer from './Components/pages/Joomla_Developer';
 import OXID_Development from './Components/pages/OXID_Development';
 
-
-
+import jQuery from 'jquery';
 
 function App() {
+
+  const [loading,setloading] = useState(false);
+
+  useEffect(()=>{
+      
+    setTimeout(()=>{
+      jQuery(".loader").fadeOut('slow');
+    },3000)
+    
+    setloading(true);
+    setTimeout(()=>{
+      setloading(false);
+    },4000)
+  },[])
+
   return (
     <div className="App">
-      <Router>
-        <Header/>
-        <NavBar/>
-        {/* <Slider/> */}
-        {/* <Section/> */}
-        <Switch>
-          <Route exact path="/" component={Section} />
-          <Route exact path="/Contact_Us" component={Contact_Us} />
-          <Route exact path="/Career" component={Career} />
-          <Route exact path="/Get_Quotation" component={Get_Quotation} />
-          <Route exact path="/Portfolio" component={Portfolio} />
-          <Route exact path="/Who_We_Are" component={Who_We_Are} />
-          <Route exact path="/Accounting_Software" component={Accounting_Software} />
-          <Route exact path="/Billing_Software" component={Billing_Software} />
-          <Route exact path="/Web_ERP" component={Web_ERP} />
-          <Route exact path="/Web_CRM" component={Web_CRM} />
-          <Route exact path="/Responsive_Website_Design" component={Responsive_Website_Design} />
-          <Route exact path="/Software_Development" component={Software_Development} />
-          <Route exact path="/SEO" component={SEO} />
-          <Route exact path="/Magento" component={Magento} />
-          <Route exact path="/WordPress" component={WordPress} />
-          <Route exact path="/IOT" component={IOT} />
-          <Route exact path="/Chatbot" component={Chatbot} />
-          <Route exact path="/PHP" component={PHP} />
-          <Route exact path="/Trusted_ERP" component={Trusted_ERP} />
-          <Route exact path="/Android_App" component={Android_App} />
-          <Route exact path="/Mobile_App" component={Mobile_App} />
-          <Route exact path="/Ios_App" component={Ios_App} />
-          <Route exact path="/React_Native_App" component={React_Native_App} />
-          <Route exact path="/Ionic_App" component={Ionic_App} />
-          <Route exact path="/Flutter_App" component={Flutter_App} />
-          <Route exact path="/Hire_Developers" component={Hire_Developers} />
-          <Route exact path="/Why_Hire_Developer" component={Why_Hire_Developer} />
-          <Route exact path="/Offshore_IT" component={Offshore_IT} />
-          <Route exact path="/Custom_Programmer" component={Custom_Programmer} />
-          <Route exact path="/Asp_Net_Developer" component={Asp_Net_Developer} />
-          <Route exact path="/Java_Developer" component={Java_Developer} />
-          <Route exact path="/PHP_Developer" component={PHP_Developer} />
-          <Route exact path="/DBMS_Developer" component={DBMS_Developer} />
-          <Route exact path="/Joomla_Developer" component={Joomla_Developer} />
-          <Route exact path="/OXID_Development" component={OXID_Development} />
-        </Switch>
-        <Footer/>
-      </Router>
+
+      {
+        loading ?
+          <div class="loader">
+          <span>I</span>
+          <span>N</span>
+          <span>F</span>
+          <span>I</span>
+          <span>L</span>
+          <span>O</span>
+          <span>N</span>
+        </div>
+        :
+          <Router>
+            <Header/>
+            <NavBar/>
+
+            <Switch>
+              <Route exact path="/" component={Section} />
+              <Route exact path="/Contact_Us" component={Contact_Us} />
+              <Route exact path="/Career" component={Career} />
+              <Route exact path="/Get_Quotation" component={Get_Quotation} />
+              <Route exact path="/Portfolio" component={Portfolio} />
+              <Route exact path="/Who_We_Are" component={Who_We_Are} />
+              <Route exact path="/Accounting_Software" component={Accounting_Software} />
+              <Route exact path="/Billing_Software" component={Billing_Software} />
+              <Route exact path="/Web_ERP" component={Web_ERP} />
+              <Route exact path="/Web_CRM" component={Web_CRM} />
+              <Route exact path="/Responsive_Website_Design" component={Responsive_Website_Design} />
+              <Route exact path="/Software_Development" component={Software_Development} />
+              <Route exact path="/SEO" component={SEO} />
+              <Route exact path="/Magento" component={Magento} />
+              <Route exact path="/WordPress" component={WordPress} />
+              <Route exact path="/IOT" component={IOT} />
+              <Route exact path="/Chatbot" component={Chatbot} />
+              <Route exact path="/PHP" component={PHP} />
+              <Route exact path="/Trusted_ERP" component={Trusted_ERP} />
+              <Route exact path="/Android_App" component={Android_App} />
+              <Route exact path="/Mobile_App" component={Mobile_App} />
+              <Route exact path="/Ios_App" component={Ios_App} />
+              <Route exact path="/React_Native_App" component={React_Native_App} />
+              <Route exact path="/Ionic_App" component={Ionic_App} />
+              <Route exact path="/Flutter_App" component={Flutter_App} />
+              <Route exact path="/Hire_Developers" component={Hire_Developers} />
+              <Route exact path="/Why_Hire_Developer" component={Why_Hire_Developer} />
+              <Route exact path="/Offshore_IT" component={Offshore_IT} />
+              <Route exact path="/Custom_Programmer" component={Custom_Programmer} />
+              <Route exact path="/Asp_Net_Developer" component={Asp_Net_Developer} />
+              <Route exact path="/Java_Developer" component={Java_Developer} />
+              <Route exact path="/PHP_Developer" component={PHP_Developer} />
+              <Route exact path="/DBMS_Developer" component={DBMS_Developer} />
+              <Route exact path="/Joomla_Developer" component={Joomla_Developer} />
+              <Route exact path="/OXID_Development" component={OXID_Development} />
+            </Switch>
+            <Footer/>
+          </Router>
+
+      }
+
+      
     </div>
   );
 }
