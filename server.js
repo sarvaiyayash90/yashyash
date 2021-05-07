@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 
-const Career_Controllers = require('./Controllers/Career_Controllers')
+const Career_Controllers = require('./controllers/Career_Controllers')
 
 var app = express();
 app.use(bodyparser.urlencoded({ extended:true }));
