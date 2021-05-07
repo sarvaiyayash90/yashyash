@@ -21,6 +21,14 @@ const Career = () => {
         setdata({ ...data, [e.target.name]: e.target.value });
     }; 
 
+    const onInputChange_no = e => {
+        // setno({ [e.target.name] : e.target.value })
+        const re = /^[0-9\b]+$/;
+        if (e.target.value === '' || re.test(e.target.value)) {
+            setdata({  phone_no : e.target.value})
+        }
+    }
+
     const [new_pdf, set_new_pdf] = useState(null);
     const [invalid_pdf, setinvalid_pdf] = useState(null);
 
@@ -356,7 +364,7 @@ const Career = () => {
                             name="fullname"
                             value={fullname}
                             class="form-control" 
-                            placeholder="Full name" onChange={e => onInputChange(e) }
+                            placeholder="John" onChange={e => onInputChange(e)}
                             style={{fontWeight:'bold'}}
                         />
                         {formerror.fullname_err && <p className="error" style={{color: 'red'}}>{formerror.fullname_err}</p>}
@@ -367,7 +375,7 @@ const Career = () => {
                             name="email"
                             value={email}
                             class="form-control" 
-                            placeholder="Email Address" onChange={e => onInputChange(e) }
+                            placeholder="Example@gmail.com" onChange={e => onInputChange(e) }
                             style={{fontWeight:'bold'}}
                         />
                         {formerror.email_err && <p className="error" style={{color: 'red'}}>{formerror.email_err}</p>}
@@ -378,9 +386,10 @@ const Career = () => {
                         <label>Phone No:</label>
                         <input type="text"
                             name="phone_no"
+                            maxlength="10"
                             value={phone_no}
                             class="form-control" 
-                            placeholder="Phone Number" onChange={e => onInputChange(e) }
+                            placeholder="000 000 0000" onChange={e => onInputChange_no(e) }
                             style={{fontWeight:'bold'}}
                         />
                         {formerror.phone_no_err && <p className="error" style={{color: 'red'}}>{formerror.phone_no_err}</p>}
@@ -416,7 +425,6 @@ const Career = () => {
                         </select>
                         {formerror.apply_for_err && <p className="error" style={{color: 'red'}}>{formerror.apply_for_err}</p>}
                     </div>
-
                     <div class="col-sm-6">
                         <label>Fresher / Experienced:</label>
                         <select class="form-control" name="fresh_experiencd" onChange={e => onInputChange(e) } style={{fontWeight:'bold'}}>
@@ -436,20 +444,17 @@ const Career = () => {
                             name="about_your_skills"
                             value={about_your_skills}
                             style={{fontWeight:'bold'}} 
-                            placeholder="Skills"
+                            placeholder="About Your Skills..."
                             onChange={e=> onInputChange(e)}
                         ></textarea>
                         {formerror.about_your_skills_err && <p className="error" style={{color: 'red'}}>{formerror.about_your_skills_err}</p>}
                     </div>
                 </div>
-
                 <br></br>
                 {!auth  && <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}} onClick={ e =>onhandlesubmit_user(e) }>Submit</button> }
                 {auth && <button type="button" class="btn btn-lg btn-outline" style={{background:'#75dbb3'}} disabled >Please Wait...Please check your Mail box...</button>}
                 </form>
             </div>
-
-
         </div>
     );
 }
