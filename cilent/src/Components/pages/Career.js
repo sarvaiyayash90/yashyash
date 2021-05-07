@@ -20,14 +20,7 @@ const Career = () => {
     const onInputChange = e => {
         setdata({ ...data, [e.target.name]: e.target.value });
     }; 
-
-    const onInputChange_no = e => {
-        // setno({ [e.target.name] : e.target.value })
-        const re = /^[0-9\b]+$/;
-        if (e.target.value === '' || re.test(e.target.value)) {
-            setdata({  phone_no : e.target.value})
-        }
-    }
+    
 
     const [new_pdf, set_new_pdf] = useState(null);
     const [invalid_pdf, setinvalid_pdf] = useState(null);
@@ -119,12 +112,6 @@ const Career = () => {
                     setformerror({ phone_no_err: '' })
                   },3000);
                 return false;
-        }else if(!about_your_skills){
-            setformerror({ about_your_skills_err: 'Please Enter About your Skills' });
-                setTimeout(()=>{
-                    setformerror({ about_your_skills_err: '' })
-                  },3000);
-                return false;
         }
         else if(new_pdf == null){
             setformerror({  resume_err : 'Please Select File' });
@@ -143,6 +130,13 @@ const Career = () => {
             setformerror({ fresh_experiencd_err: 'Please Select Any Option' });
                 setTimeout(()=>{
                     setformerror({ fresh_experiencd_err: '' })
+                  },3000);
+                return false;
+        }
+        else if(!about_your_skills){
+            setformerror({ about_your_skills_err: 'Please Enter About your Skills' });
+                setTimeout(()=>{
+                    setformerror({ about_your_skills_err: '' })
                   },3000);
                 return false;
         }
@@ -166,7 +160,7 @@ const Career = () => {
                 bodyFormData.append("resume", new_pdf);
             }
             
-            axios.post("/Careerdata/Career_Apply_Now",bodyFormData)
+            axios.post("http://localhost:5000/Careerdata/Career_Apply_Now",bodyFormData)
             .then((res)=>{
                 setauth(true)
                 setTimeout(()=>{
@@ -364,7 +358,7 @@ const Career = () => {
                             name="fullname"
                             value={fullname}
                             class="form-control" 
-                            placeholder="John" onChange={e => onInputChange(e)}
+                            placeholder="John" onChange={e => onInputChange(e) }
                             style={{fontWeight:'bold'}}
                         />
                         {formerror.fullname_err && <p className="error" style={{color: 'red'}}>{formerror.fullname_err}</p>}
@@ -386,10 +380,10 @@ const Career = () => {
                         <label>Phone No:</label>
                         <input type="text"
                             name="phone_no"
-                            maxlength="10"
                             value={phone_no}
+                            maxlength="10"
                             class="form-control" 
-                            placeholder="000 000 0000" onChange={e => onInputChange_no(e) }
+                            placeholder="000 000 0000" onChange={e => onInputChange(e) }
                             style={{fontWeight:'bold'}}
                         />
                         {formerror.phone_no_err && <p className="error" style={{color: 'red'}}>{formerror.phone_no_err}</p>}
@@ -425,6 +419,7 @@ const Career = () => {
                         </select>
                         {formerror.apply_for_err && <p className="error" style={{color: 'red'}}>{formerror.apply_for_err}</p>}
                     </div>
+
                     <div class="col-sm-6">
                         <label>Fresher / Experienced:</label>
                         <select class="form-control" name="fresh_experiencd" onChange={e => onInputChange(e) } style={{fontWeight:'bold'}}>
@@ -444,17 +439,20 @@ const Career = () => {
                             name="about_your_skills"
                             value={about_your_skills}
                             style={{fontWeight:'bold'}} 
-                            placeholder="About Your Skills..."
+                            placeholder="About Your Skills"
                             onChange={e=> onInputChange(e)}
                         ></textarea>
                         {formerror.about_your_skills_err && <p className="error" style={{color: 'red'}}>{formerror.about_your_skills_err}</p>}
                     </div>
                 </div>
+
                 <br></br>
                 {!auth  && <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}} onClick={ e =>onhandlesubmit_user(e) }>Submit</button> }
                 {auth && <button type="button" class="btn btn-lg btn-outline" style={{background:'#75dbb3'}} disabled >Please Wait...Please check your Mail box...</button>}
                 </form>
             </div>
+
+
         </div>
     );
 }
