@@ -102,6 +102,10 @@ router.post('/Career_Apply_Now',(req,res)=>{
                                 subject:'Build Career',
                                 html:`
                                 <h1>Thanks for Apply</h1>
+                                <br></br>
+                                <br></br>
+                                Thanks & Regards!
+                                Infilon Technologies Pvt. Ltd.
                                 `
                             }
                             transport.sendMail(mailOptions,function(err,info){

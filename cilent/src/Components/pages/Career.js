@@ -150,8 +150,8 @@ const Career = () => {
             console.log('form_data',bodyFormData);
 
             if (new_pdf != null) {
-                if (!new_pdf.name.match(/\.(pdf|doc)$/)) {
-                    setinvalid_pdf('Please select valid File.');
+                if (!new_pdf.name.match(/\.(pdf|docx)$/)) {
+                    setinvalid_pdf('Please select valid File Like PDF And Docx...');
                     return false;
                 }
                 setinvalid_pdf('');    
