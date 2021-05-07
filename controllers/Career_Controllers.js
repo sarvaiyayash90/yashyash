@@ -103,8 +103,8 @@ router.post('/Career_Apply_Now',(req,res)=>{
                                 html:`
                                 <h1>Thanks for Apply</h1>
                                 <br></br>
-                                <br></br>
                                 Thanks & Regards!
+                                <br></br>
                                 Infilon Technologies Pvt. Ltd.
                                 `
                             }
