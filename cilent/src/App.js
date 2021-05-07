@@ -49,12 +49,19 @@ import PHP_Developer from './Components/pages/PHP_Developer';
 import DBMS_Developer from './Components/pages/DBMS_Developer';
 import Joomla_Developer from './Components/pages/Joomla_Developer';
 import OXID_Development from './Components/pages/OXID_Development';
+import Open_Source_Services from './Components/pages/Open_Source_Services';
+import Domain_Hosting from './Components/pages/Domain_Hosting';
+import BULK_SMS_EMAIL from './Components/pages/BULK_SMS_EMAIL';
 
-import jQuery from 'jquery';
+
+
+
+
+// import jQuery from 'jquery';
 
 function App() {
 
-  const [loading,setloading] = useState(false);
+  // const [loading,setloading] = useState(false);
 
   // useEffect(()=>{
       
@@ -123,6 +130,9 @@ function App() {
               <Route exact path="/DBMS_Developer" component={DBMS_Developer} />
               <Route exact path="/Joomla_Developer" component={Joomla_Developer} />
               <Route exact path="/OXID_Development" component={OXID_Development} />
+              <Route exact path="/Open_Source_Services" component={Open_Source_Services} />
+              <Route exact path="/Domain_Hosting" component={Domain_Hosting} />
+              <Route exact path="/BULK_SMS_EMAIL" component={BULK_SMS_EMAIL} />
             </Switch>
             <Footer/>
           </Router>

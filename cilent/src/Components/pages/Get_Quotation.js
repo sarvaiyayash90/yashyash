@@ -44,7 +44,7 @@ const Get_Quotation = () => {
                 </select>. You can call me on&nbsp;<select id="select_op_call">
                     <option value="Select an option">+91</option>
                     <option value="Select an option">+98</option>   
-                </select><input type="text" id="Enter_name" placeholder="Enter Contact no" maxlength="10" value={number} onChange={e => onChange_no(e)}/>or
+                </select><input type="text" id="Enter_name" placeholder="Enter Contact no" maxlength="12" value={number} onChange={e => onChange_no(e)}/>or
                 <br></br>
                 <div className="mt-3"></div>
                 mail me at &nbsp;<input type="email" id="Enter_name" placeholder="Enter Email"/>. I heard about you through

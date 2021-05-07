@@ -1,5 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+// import Pdf from '../../../public/Images/Employee_Policy/EmployeePolicy.pdf';
+
+import Pdf_new from '../../Images/Employee_Policy/EmployeePolicy.pdf';
 
 const Footer = () => {
     return (  
@@ -76,7 +79,7 @@ const Footer = () => {
                             {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
                                 <i class="fal fa-chevron-right"></i>&nbsp;Open Source Development
                             </NavLink> */}
-                            <a href="/" style={{textDecoration:'none'}} >
+                            <a href="/Open_Source_Services" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Open Source Development
                             </a>
                         </li>
@@ -145,7 +148,7 @@ const Footer = () => {
                             {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
                                 <i class="fal fa-chevron-right"></i>&nbsp;Domain & Hosting
                             </NavLink> */}
-                            <a href="" style={{textDecoration:'none'}} >
+                            <a href="/Domain_Hosting" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Domain & Hosting
                             </a>
                         </li>
@@ -153,7 +156,7 @@ const Footer = () => {
                             {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
                                 <i class="fal fa-chevron-right"></i>&nbsp;Bulk SMS & Email
                             </NavLink> */}
-                            <a href="" style={{textDecoration:'none'}} >
+                            <a href="/BULK_SMS_EMAIL" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Bulk SMS & Email
                             </a>
                         </li>
@@ -161,7 +164,7 @@ const Footer = () => {
                             {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
                                 <i class="fal fa-chevron-right"></i>&nbsp;Employee policy
                             </NavLink> */}
-                            <a href="" style={{textDecoration:'none'}} >
+                            <a href={Pdf_new} target = "_blank" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Employee policy
                             </a>
                         </li>

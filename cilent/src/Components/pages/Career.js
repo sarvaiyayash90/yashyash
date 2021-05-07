@@ -1,6 +1,181 @@
-const Career = () => {
-    return (
+import React,{useState,useEffect} from 'react'
 
+import axios from 'axios';
+
+
+const Career = () => {
+
+    const[data,setdata]=useState({
+        fullname : '',
+        email : '',
+        phone_no : '',
+        apply_for :'',
+        fresh_experiencd : '',
+        about_your_skills : '',
+        resume:null
+    })
+
+    const {fullname,email,phone_no,apply_for,resume,fresh_experiencd,about_your_skills} = data;
+
+    const onInputChange = e => {
+        setdata({ ...data, [e.target.name]: e.target.value });
+    }; 
+
+    const [new_pdf, set_new_pdf] = useState(null);
+    const [invalid_pdf, setinvalid_pdf] = useState(null);
+
+    const [auth,setauth]=useState(false);
+    const [error,seterror]=useState('');
+    
+    const [formerror,setformerror]=useState({
+        fullname_err : null,
+        email_err : null,
+        phone_no_err : null,
+        password_err :null,
+        about_your_skills_err:null,
+        resume_err:null,
+        apply_for_err:null,
+        fresh_experiencd_err:null
+    });
+    
+    // const onInputChange_resume = e => {
+    //     const pdfFile = e.target.files[0];
+
+    //     if (!pdfFile) {
+    //         setpdf({ invalid_pdf: 'Please select File.' });
+    //         return false;
+    //     }
+        
+    //     if (!pdfFile.name.match(/\.(pdf|doc)$/)) {
+    //         setpdf({ invalid_pdf: 'Please select valid File.' });
+    //         return false;
+    //     }
+
+    //     reader.onload = (e) => {
+    //         const img = new Image();
+    //         img.onload = () => {
+    //             setpdf({ resume: pdfFile, invalid_pdf: null,handleResponse: null });
+    //             return true;
+    //         };
+    //         img.onerror = () => {
+    //             setpdf({ invalid_pdf: 'Invalid File content.' });
+    //             return false;
+    //         };
+    //         debugger
+    //         img.src = e.target.result;
+    //     };
+    //     reader.readAsDataURL(pdfFile);
+    // };
+    
+
+    const onhandlesubmit_user = e =>{
+        e.preventDefault();
+
+        if(!fullname && !email && !phone_no && !about_your_skills && !resume && !apply_for && !fresh_experiencd){
+            setformerror({  
+                fullname_err: 'Please Enter Fullname',
+                email_err: 'Please Enter email',
+                phone_no_err: 'Please Enter Phone_no',
+                password_err: 'Please Enter password',
+                about_your_skills_err: 'Please Enter about your skills',
+                resume_err : 'Please Select File',
+                apply_for_err : 'Please Select Any Option',
+                fresh_experiencd_err:'Please Select Any Option'
+            });
+            setTimeout(()=>{setformerror({ 
+                fullname_err: '',
+                email_err: '',
+                phone_no_err : '',
+                password_err : '',
+                about_your_skills_err : '',
+                resume_err:'',
+                apply_for_err:'',
+                fresh_experiencd_err:''
+            })},3000);
+        }
+        else if(!fullname){
+            setformerror({ fullname_err: 'Please Enter fullname' });
+                setTimeout(()=>{
+                    setformerror({ fullname_err: '' })
+                },3000);
+            return false;
+        }else if(!email){
+            setformerror({ email_err: 'Please Enter email' });
+            setTimeout(()=>{
+                setformerror({ email_err: '' })
+                },3000);
+            return false;
+        }else if(!phone_no){
+            setformerror({ phone_no_err: 'Please Enter phone_no' });
+                setTimeout(()=>{
+                    setformerror({ phone_no_err: '' })
+                  },3000);
+                return false;
+        }else if(!about_your_skills){
+            setformerror({ about_your_skills_err: 'Please Enter About your Skills' });
+                setTimeout(()=>{
+                    setformerror({ about_your_skills_err: '' })
+                  },3000);
+                return false;
+        }
+        else if(new_pdf == null){
+            setformerror({  resume_err : 'Please Select File' });
+                setTimeout(()=>{
+                    setformerror({ resume_err: '' })
+                  },3000);
+                return false;
+        }
+        else if(apply_for==''){
+            setformerror({ apply_for_err: 'Please Select Any Option' });
+                setTimeout(()=>{
+                    setformerror({ apply_for_err: '' })
+                  },3000);
+                return false;
+        }else if(fresh_experiencd==''){
+            setformerror({ fresh_experiencd_err: 'Please Select Any Option' });
+                setTimeout(()=>{
+                    setformerror({ fresh_experiencd_err: '' })
+                  },3000);
+                return false;
+        }
+        else{
+            const bodyFormData = new FormData();
+            bodyFormData.append("fullname",fullname);
+            bodyFormData.append("email",email);
+            bodyFormData.append("phone_no",phone_no);
+            bodyFormData.append("apply_for",apply_for);
+            bodyFormData.append("fresh_experiencd",fresh_experiencd);
+            bodyFormData.append("about_your_skills",about_your_skills);
+
+            console.log('form_data',bodyFormData);
+
+            if (new_pdf != null) {
+                if (!new_pdf.name.match(/\.(pdf|doc)$/)) {
+                    setinvalid_pdf('Please select valid File.');
+                    return false;
+                }
+                setinvalid_pdf('');    
+                bodyFormData.append("resume", new_pdf);
+            }
+            
+            axios.post("/Careerdata/Career_Apply_Now",bodyFormData)
+            .then((res)=>{
+                setauth(true)
+                window.location.href="/"
+            }).catch((err)=>{
+                window.location.reload()
+                if (err.response && err.response.data) {
+                    //console.log(err.response.data.message) // some reason error message
+                    seterror(err.response.data.message)
+                    setTimeout(()=>{
+                      seterror("")
+                    },5000);
+                }
+            })
+        }
+    }
+    
+    return (
 
         <div className="container-fluid p-0">
             <div className="contact-section-nav">
@@ -171,30 +346,61 @@ const Career = () => {
             <div className="career-section-apply mb-4">
                 <h1>Apply Now</h1>
                 <form>
+                {error && <p style={{color:'red'}}> {error} </p>}
                 <div className="row mt-2 text-left">
                     <div className="col-sm-6">
                         <label>Full Name</label>
-                        <input type="text" class="form-control" placeholder="Full name" style={{fontWeight:'bold'}}/>
+                        <input type="text" 
+                            name="fullname"
+                            value={fullname}
+                            class="form-control" 
+                            placeholder="Full name" onChange={e => onInputChange(e) }
+                            style={{fontWeight:'bold'}}
+                        />
+                        {formerror.fullname_err && <p className="error" style={{color: 'red'}}>{formerror.fullname_err}</p>}
                     </div>
                     <div class="col-sm-6">
                         <label>Email</label>
-                        <input type="email" class="form-control" placeholder="Email Address" style={{fontWeight:'bold'}}/>
+                        <input type="email"
+                            name="email"
+                            value={email}
+                            class="form-control" 
+                            placeholder="Email Address" onChange={e => onInputChange(e) }
+                            style={{fontWeight:'bold'}}
+                        />
+                        {formerror.email_err && <p className="error" style={{color: 'red'}}>{formerror.email_err}</p>}
                     </div>
                 </div>
                 <div class="row mt-2 text-left">
                     <div class="col-sm-6">
                         <label>Phone No:</label>
-                        <input type="text" class="form-control" placeholder="Phone Number" style={{fontWeight:'bold'}}/>
+                        <input type="text"
+                            name="phone_no"
+                            value={phone_no}
+                            class="form-control" 
+                            placeholder="Phone Number" onChange={e => onInputChange(e) }
+                            style={{fontWeight:'bold'}}
+                        />
+                        {formerror.phone_no_err && <p className="error" style={{color: 'red'}}>{formerror.phone_no_err}</p>}
                     </div>
                     <div class="col-sm-6">
                         <label>Resume</label>
-                        <input type="file" class="form-control"/>
+                        <input type="file"
+                            name="resume"
+                            // accept=".pdf, .doc"
+                            onChange={e=>{
+                                set_new_pdf(e.target.files[0])
+                            }}
+                            class="form-control"
+                        />
+                        {formerror.resume_err && <p className="error" style={{color: 'red'}}>{formerror.resume_err}</p>}
+                        <p className="error" style={{color: 'red'}}>{invalid_pdf}</p>
                     </div>
                 </div>
                 <div class="row mt-2 text-left">
                     <div class="col-sm-6">
                         <label>Apply For:</label>
-                        <select class="form-control" name="cars" id="cars" style={{fontWeight:'bold'}}>
+                        <select class="form-control" name="apply_for" onChange={e => onInputChange(e) } style={{fontWeight:'bold'}}>
                             <option value="">---</option>
                             <option value="React Js Developer">React Js Developer</option>
                             <option value="Node Js Developer">Node Js Developer</option>
@@ -206,24 +412,38 @@ const Career = () => {
                             <option value="Content Writer">Content Writer</option>
                             <option value="QA Engineer">QA Engineer</option>
                         </select>
+                        {formerror.apply_for_err && <p className="error" style={{color: 'red'}}>{formerror.apply_for_err}</p>}
                     </div>
+
                     <div class="col-sm-6">
                         <label>Fresher / Experienced:</label>
-                        <select class="form-control" name="cars" id="cars" style={{fontWeight:'bold'}}>
+                        <select class="form-control" name="fresh_experiencd" onChange={e => onInputChange(e) } style={{fontWeight:'bold'}}>
                             <option value="">---</option>
                             <option value="Fresher">Fresher</option>
                             <option value="Experienced">Experienced</option>
                         </select>
+                        {formerror.fresh_experiencd_err && <p className="error" style={{color: 'red'}}>{formerror.fresh_experiencd_err}</p>}
                     </div>
                 </div>
                 <div class="row mt-2 text-left">
                     <div class="col-sm-12">
                         <label>About Your Skills:</label>
-                        <textarea class="form-control" rows="4" cols="50" style={{fontWeight:'bold'}} placeholder="Skills"></textarea>
+                        <textarea class="form-control" 
+                            rows="4" 
+                            cols="50"
+                            name="about_your_skills"
+                            value={about_your_skills}
+                            style={{fontWeight:'bold'}} 
+                            placeholder="Skills"
+                            onChange={e=> onInputChange(e)}
+                        ></textarea>
+                        {formerror.about_your_skills_err && <p className="error" style={{color: 'red'}}>{formerror.about_your_skills_err}</p>}
                     </div>
                 </div>
+
                 <br></br>
-                <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}}>Submit</button>
+                {!auth  && <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}} onClick={ e =>onhandlesubmit_user(e) }>Submit</button> }
+                {auth && <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}} disabled >Please Wait save user data</button>}
                 </form>
             </div>
 

@@ -2526,7 +2526,7 @@ button:focus
   width:100%;
   height:auto;
   border:0px solid red;
-  padding: 80px  230px  80px 230px; 
+  padding: 80px  220px  80px 230px; 
 }
 
 .OXID-Development-section h2
@@ -2550,6 +2550,94 @@ button:focus
 }
 
 /* OXID-Development-section end */
+
+/* OPEN SOURCE DEVELOPMENT start */
+.open-source-development
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  200px  80px 230px; 
+}
+
+.open-source-development p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+#open-source-if
+{
+  text-align:center;
+}
+
+#open-source-open
+{
+  margin:0px 0 50px 0;
+}
+
+.open-source-development h6
+{
+  text-align:left;
+  margin:60px 0 0 0;
+}
+/* OPEN SOURCE DEVELOPMENT end */
+
+/* domain-hosting-section start */
+.domain-hosting-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px 350px 0px 350px; 
+}
+
+.domain-hosting-section p
+{
+  margin:80px 0 80px 0;
+  font-size:16px;
+}
+
+.domain-hosting-section-inside
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 0px 220px 80px 220px; 
+  font-size:16px;
+}
+/* domain-hosting-section end */
+
+/* Bulk-SMS-Email start */
+.Bulk-SMS-Email-section
+{
+   padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 80px  220px  80px 220px;
+}
+
+.Bulk-SMS-Email-section p
+{
+    font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+
+/* Bulk-SMS-Email end */
 
 /* =============================================================================================== */
 
@@ -4423,6 +4511,92 @@ button:focus
 
 /* OXID-Development-section end */
 
+/* OPEN SOURCE DEVELOPMENT start */
+.open-source-development
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.open-source-development p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+.open-source-development h2
+{
+  font-size: 28px;
+}
+
+#open-source-if
+{
+  text-align:justify;
+  font-size: 17px;
+}
+
+#open-source-open
+{
+  margin:0px 0 30px 0;
+}
+
+.open-source-development h6
+{
+  text-align:left;
+  margin:40px 0 0 0;
+}
+/* OPEN SOURCE DEVELOPMENT end */
+
+/* domain-hosting-section start */
+.domain-hosting-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 50px 20px 20px 20px; 
+}
+
+.domain-hosting-section p
+{
+  padding:0;
+  margin:0;
+  margin:40px 0 0px 0;
+  text-align:justify;
+}
+
+.domain-hosting-section-inside
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 10px 4px 50px 4px; 
+  text-align:justify;
+}
+/* domain-hosting-section end */
+
+/* Bulk-SMS-Email start */
+.Bulk-SMS-Email-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 50px 20px 50px 20px; 
+}
+
+.Bulk-SMS-Email-section p
+{
+  text-align: justify;
+}
+/* Bulk-SMS-Email end */
 
 }
 
@@ -6239,6 +6413,96 @@ button:focus
 }
 
 /* OXID-Development-section end */
+
+
+/* OPEN SOURCE DEVELOPMENT start */
+.open-source-development
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  border:0px solid red;
+  padding: 50px 20px 50px 20px; 
+}
+
+.open-source-development p
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  color:#665e5e;
+  font-size:17px;
+  margin:10px 0 0 0;
+}
+.open-source-development h2
+{
+  font-size: 28px;
+}
+
+#open-source-if
+{
+  text-align:justify;
+  font-size: 17px;
+}
+
+#open-source-open
+{
+  margin:0px 0 30px 0;
+}
+
+.open-source-development h6
+{
+  text-align:left;
+  margin:40px 0 0 0;
+}
+/* OPEN SOURCE DEVELOPMENT end */
+
+/* domain-hosting-section start */
+.domain-hosting-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 50px 20px 20px 20px; 
+}
+
+.domain-hosting-section p
+{
+  padding:0;
+  margin:0;
+  margin:40px 0 0px 0;
+  text-align:justify;
+}
+
+.domain-hosting-section-inside
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 10px 4px 50px 4px; 
+  text-align:justify;
+}
+/* domain-hosting-section end */
+
+/* Bulk-SMS-Email start */
+.Bulk-SMS-Email-section
+{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding: 50px 20px 50px 20px; 
+}
+
+.Bulk-SMS-Email-section p
+{
+  text-align: justify;
+}
+/* Bulk-SMS-Email end */
+
+
 
 /* .Main-section-footer-inside-icon 
 {
