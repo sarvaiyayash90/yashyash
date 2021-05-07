@@ -160,7 +160,7 @@ const Career = () => {
                 bodyFormData.append("resume", new_pdf);
             }
             
-            axios.post("http://localhost:5000/Careerdata/Career_Apply_Now",bodyFormData)
+            axios.post("/Careerdata/Career_Apply_Now",bodyFormData)
             .then((res)=>{
                 setauth(true)
                 setTimeout(()=>{
