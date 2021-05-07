@@ -161,7 +161,9 @@ const Career = () => {
             axios.post("/Careerdata/Career_Apply_Now",bodyFormData)
             .then((res)=>{
                 setauth(true)
-                window.location.href="/"
+                setTimeout(()=>{
+                    window.location.href="/"
+                },2000)
             }).catch((err)=>{
                 window.location.reload()
                 if (err.response && err.response.data) {
@@ -443,7 +445,7 @@ const Career = () => {
 
                 <br></br>
                 {!auth  && <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}} onClick={ e =>onhandlesubmit_user(e) }>Submit</button> }
-                {auth && <button type="button" class="btn btn-outline" id="btnbtn" style={{background:'#75dbb3'}} disabled >Please Wait save user data</button>}
+                {auth && <button type="button" class="btn btn-lg btn-outline" style={{background:'#75dbb3'}} disabled >Please Wait...Please check your Mail box...</button>}
                 </form>
             </div>
 
