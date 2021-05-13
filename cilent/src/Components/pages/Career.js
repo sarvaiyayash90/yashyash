@@ -5,6 +5,22 @@ import axios from 'axios';
 
 const Career = () => {
 
+
+    // useEffect(()=>{        
+        /* always keep at least 1 open by preventing the current to close itself */
+        // const $ = window.$;
+        // $('[data-toggle="collapse"]').on('click',function(e){
+        //     if ( $(this).parents('.accordion').find('.collapse.show') ){
+        //         var idx = $(this).index('[data-toggle="collapse"]');
+        //         if (idx == $('.collapse.show').index('.collapse')) {
+        //             // prevent collapse
+        //             e.stopPropagation();
+        //         }
+        //     }
+        // });
+    // },[])
+
+
     const[data,setdata]=useState({
         fullname : '',
         email : '',
@@ -182,7 +198,7 @@ const Career = () => {
     return (
 
         <div className="container-fluid p-0">
-            <div className="contact-section-nav">
+            <div className="contact-section-nav">s
                 <div className="contact-section-nav-text">
                     <h1>Current Openings</h1>
                     <p>build your career with us</p>
@@ -191,129 +207,142 @@ const Career = () => {
 
             <div className="career-section-collapsedata">
 
-                <div className="career-section-collapsedata-inside">
-                    <p>
-                        <a class="btn" data-toggle="collapse" data-target="#collapseExample_node_js" aria-expanded="false" aria-controls="collapseExample">
-                            Node.js Developer
-                            <a className="mydiv ml-3" style={{color:'white'}}>NEW</a>
-                        </a>
-                    </p>
-                    <div class="collapse" id="collapseExample_node_js">
-                        <div class="card card-body" >
-                            <div className="row inside">
-                                <div className="col-sm-4 pt-1">
-                                    <h5>Exp : <b>Fresher or Exp.</b></h5>
+                <div id="accordion" class="accordion">
+
+                    <div className="career-section-collapsedata-inside">
+                        <p>
+                            <h4 class="panel-title">
+                                <a class="btn collapsed" data-toggle="collapse" data-target="#collapseExample_node_js" aria-expanded="false" aria-controls="collapseExample">
+                                    Node.js Developer
+                                    <a className="mydiv ml-3" style={{color:'white'}}>NEW</a>
+                                </a>
+                            </h4>
+                        </p>
+                        <div class="collapse show" id="collapseExample_node_js" data-parent="#accordion">
+                            <div class="card card-body" >
+                                <div className="row inside">
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>Exp : <b>Fresher or Exp.</b></h5>
+                                    </div>
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>Job Type : <b>Full Time</b></h5>
+                                    </div>
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>No. of Openings : <b>4</b></h5>
+                                    </div>
                                 </div>
-                                <div className="col-sm-4 pt-1">
-                                    <h5>Job Type : <b>Full Time</b></h5>
-                                </div>
-                                <div className="col-sm-4 pt-1">
-                                    <h5>No. of Openings : <b>4</b></h5>
-                                </div>
+                                <ul className="text-left mt-2">
+                                    <b>Key responsibility</b>
+                                    <li>Basic knowledge of NodeJS,Express</li>
+                                    <li>Knowledge advance Front-End Technologies (React/Angular)</li>
+                                    <li>Good knowledge of REST API Design and Development in Node.js</li>
+                                    <li>Experience working with databases such as MySQL, MongoDB</li>
+                                    <li>Familiarity with RESTful APIs</li>
+                                    <li>Familiarity with code versioning tools (GIT, BitBucket)</li>
+                                    <li>Understanding of modularized / service-oriented architecture</li>
+                                    <li style={{listStyle:'none',float:'right',fontWeight:'bold'}}><a  style={{background:'none',textDecoration:'none',color:'#75dbb3'}}  href="#call_apply_form">Apply Now >></a></li>
+                                </ul>
                             </div>
-                            <ul className="text-left mt-2">
-                                <b>Key responsibility</b>
-                                <li>Basic knowledge of NodeJS,Express</li>
-                                <li>Knowledge advance Front-End Technologies (React/Angular)</li>
-                                <li>Good knowledge of REST API Design and Development in Node.js</li>
-                                <li>Experience working with databases such as MySQL, MongoDB</li>
-                                <li>Familiarity with RESTful APIs</li>
-                                <li>Familiarity with code versioning tools (GIT, BitBucket)</li>
-                                <li>Understanding of modularized / service-oriented architecture</li>
-                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div className="career-section-collapsedata-inside mt-3">
-                    <p>
-                        <a class="btn" data-toggle="collapse" data-target="#collapseExample_php" aria-expanded="false" aria-controls="collapseExample">
-                            PHP Developer ( MVC )
-                            <a className="mydiv ml-3" style={{color:'white'}}>NEW</a>
-                        </a>
-                    </p>
-                    <div class="collapse" id="collapseExample_php">
-                        <div class="card card-body">
-                            <div className="row inside">
-                                <div className="col-sm-4 pt-1">
-                                    <h5>Exp : <b>1+ Year</b></h5>
+                    <div className="career-section-collapsedata-inside mt-3">
+                        <p>
+                            <h4 class="panel-title">
+                                <a class="btn collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseExample_php" aria-expanded="false" aria-controls="collapseExample">
+                                    PHP Developer ( MVC )
+                                    <a className="mydiv ml-3" style={{color:'white'}}>NEW</a>
+                                </a>
+                            </h4>
+                        </p>
+                        <div class="collapse" id="collapseExample_php" data-parent="#accordion">
+                            <div class="card card-body">
+                                <div className="row inside">
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>Exp : <b>1+ Year</b></h5>
+                                    </div>
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>Job Type : <b>Full Time</b></h5>
+                                    </div>
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>No. of Openings : <b>3</b></h5>
+                                    </div>
                                 </div>
-                                <div className="col-sm-4 pt-1">
-                                    <h5>Job Type : <b>Full Time</b></h5>
-                                </div>
-                                <div className="col-sm-4 pt-1">
-                                    <h5>No. of Openings : <b>3</b></h5>
-                                </div>
+                                <p id="php_text"className="mt-2">PHP Developer Position We are a rapidly growing, innovative, nationwide company in Ahmedabad. We are search a PHP developer with solid programming experience. This is a fantabulous opportunity to apply your skills and experience in a fun and exciting work environment. Our champion candidates to fill this position should have the following. Required Skills Experience writing object-oriented code for PHP Experience writing code for a MVC web framework a plus Experience with HTML and CSS Experience with JavaScriptAJAX including common libraries and debugging tools Knowledge of web services a plus Experience with OCR is a big plus Cloud experience a plus, knowledge of Scripting and OS installation configuration. Excellent communication skills, self-starter and ability to work with a team Education Bachelor & degree in Computer Science or a related field 1+ years of experience Please email resume today. We are growing our team because of continuous growth of our company, so if you are a talented, hard-working individual who is willing to make an immediate result, apply today and be part of something big!</p>
+                                <ul className="text-left mt-1">
+                                    <b>Key responsibility</b>
+                                    <li>Good Programming Knowledge in Codeigniter or Laravel PHP Framework</li>
+                                    <li>Good Programming Knowledge in PHP, MYSQL, AjJAX & Javascript, JQuery</li>
+                                    <li>Good understanding of XHTML/HTML, CSS & XML</li>
+                                    <li>Should be technically sound in OOPs Concepts</li>
+                                    <li>Preferred Knowledge in MVC Framework</li>
+                                    <li>Experience working with third-party APIs & web services</li>
+                                    <li>Strong database concepts and SQL queries</li>
+                                    <li>Hard Working And Growth-oriented</li>
+                                    <li>Able to work independently and Team</li>
+                                    <li>Excellent communication and analytical skills</li>
+                                    <li>Communicate effectively with client & project manager</li>
+                                    <li>Communicate effectively with client & project manager</li>
+                                    <li style={{listStyle:'none',float:'right',fontWeight:'bold'}}><a  style={{background:'none',textDecoration:'none',color:'#75dbb3'}}  href="#call_apply_form">Apply Now >></a></li>
+                                </ul>
                             </div>
-                            <p id="php_text"className="mt-2">PHP Developer Position We are a rapidly growing, innovative, nationwide company in Ahmedabad. We are search a PHP developer with solid programming experience. This is a fantabulous opportunity to apply your skills and experience in a fun and exciting work environment. Our champion candidates to fill this position should have the following. Required Skills Experience writing object-oriented code for PHP Experience writing code for a MVC web framework a plus Experience with HTML and CSS Experience with JavaScriptAJAX including common libraries and debugging tools Knowledge of web services a plus Experience with OCR is a big plus Cloud experience a plus, knowledge of Scripting and OS installation configuration. Excellent communication skills, self-starter and ability to work with a team Education Bachelor & degree in Computer Science or a related field 1+ years of experience Please email resume today. We are growing our team because of continuous growth of our company, so if you are a talented, hard-working individual who is willing to make an immediate result, apply today and be part of something big!</p>
-                            <ul className="text-left mt-1">
-                                <b>Key responsibility</b>
-                                <li>Good Programming Knowledge in Codeigniter or Laravel PHP Framework</li>
-                                <li>Good Programming Knowledge in PHP, MYSQL, AjJAX & Javascript, JQuery</li>
-                                <li>Good understanding of XHTML/HTML, CSS & XML</li>
-                                <li>Should be technically sound in OOPs Concepts</li>
-                                <li>Preferred Knowledge in MVC Framework</li>
-                                <li>Experience working with third-party APIs & web services</li>
-                                <li>Strong database concepts and SQL queries</li>
-                                <li>Hard Working And Growth-oriented</li>
-                                <li>Able to work independently and Team</li>
-                                <li>Excellent communication and analytical skills</li>
-                                <li>Communicate effectively with client & project manager</li>
-                                <li>Communicate effectively with client & project manager</li>
-                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div className="career-section-collapsedata-inside mt-3">
-                    <p>
-                        <a class="btn" data-toggle="collapse" data-target="#collapseExample_React" aria-expanded="false" aria-controls="collapseExample">
-                            React Native Developer
-                            <a className="mydiv ml-3" style={{color:'white'}}>NEW</a>
-                        </a>
-                    </p>
-                    <div class="collapse" id="collapseExample_React">
-                        <div class="card card-body">
-                            <div className="row inside">
-                                <div className="col-sm-4 pt-1">
-                                    <h5>Exp : <b>1+ Year</b></h5>
+                    <div className="career-section-collapsedata-inside mt-3">
+                        <p>
+                            <h4 class="panel-title">
+                                <a class="btn collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseExample_React" aria-expanded="false" aria-controls="collapseExample">
+                                    React Native Developer
+                                    <a className="mydiv ml-3" style={{color:'white'}}>NEW</a>
+                                </a>
+                            </h4>
+                        </p>
+                        <div class="collapse" id="collapseExample_React" data-parent="#accordion">
+                            <div class="card card-body">
+                                <div className="row inside">
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>Exp : <b>1+ Year</b></h5>
+                                    </div>
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>Job Type : <b>Full Time</b></h5>
+                                    </div>
+                                    <div className="col-sm-4 pt-1">
+                                        <h5>No. of Openings : <b>2</b></h5>
+                                    </div>
                                 </div>
-                                <div className="col-sm-4 pt-1">
-                                    <h5>Job Type : <b>Full Time</b></h5>
-                                </div>
-                                <div className="col-sm-4 pt-1">
-                                    <h5>No. of Openings : <b>2</b></h5>
-                                </div>
+                                <p className="mt-2" id="php_text">Plan to carry out big mobile cross platform applications in next 2 years. We require highly skilled candidate specially in React Native + Redux framework and clear view of design layouts of web designing</p>
+                                <ul className="text-left">
+                                    <b>Key responsibility</b>
+                                    <li>Deep knowledge of basic React Native components</li>
+                                    <li>Firm grasp of the JavaScript and TypeScript language (EcmaScript)</li>
+                                    <li>Good understanding of Object-Oriented concepts & Data Structures</li>
+                                    <li>Translating designs and wireframes into high-quality code</li>
+                                    <li>Building reusable components and libraries for future use</li>
+                                    <li>Comfortable in working with third-party dependencies and debugging dependency conflicts</li>
+                                    <li>Experience with popular workflows (such as Redux)</li>
+                                    <li>Familiarity with RESTful APIs</li>
+                                    <li>Familiarity with native build tools, like XCode, Gradle on Android Studio.</li>
+                                    <li>Work with native modules when required</li>
+                                    <li>Familiarity with code versioning tools such as Git & SVN</li>
+                                    <li>Build and deploy applications to iOS and Google Play stores.</li>
+                                    <b>Required Experience, Skills and Qualifications</b>
+                                    <li>Knowledge of computer programming, Proffered Javascript and Android development</li>
+                                    <li style={{listStyle:'none',float:'right',fontWeight:'bold'}}><a  style={{background:'none',textDecoration:'none',color:'#75dbb3'}}  href="#call_apply_form">Apply Now >></a></li>
+                                </ul>
                             </div>
-                            <p className="mt-2" id="php_text">Plan to carry out big mobile cross platform applications in next 2 years. We require highly skilled candidate specially in React Native + Redux framework and clear view of design layouts of web designing</p>
-                            <ul className="text-left">
-                                <b>Key responsibility</b>
-                                <li>Deep knowledge of basic React Native components</li>
-                                <li>Firm grasp of the JavaScript and TypeScript language (EcmaScript)</li>
-                                <li>Good understanding of Object-Oriented concepts & Data Structures</li>
-                                <li>Translating designs and wireframes into high-quality code</li>
-                                <li>Building reusable components and libraries for future use</li>
-                                <li>Comfortable in working with third-party dependencies and debugging dependency conflicts</li>
-                                <li>Experience with popular workflows (such as Redux)</li>
-                                <li>Familiarity with RESTful APIs</li>
-                                <li>Familiarity with native build tools, like XCode, Gradle on Android Studio.</li>
-                                <li>Work with native modules when required</li>
-                                <li>Familiarity with code versioning tools such as Git & SVN</li>
-                                <li>Build and deploy applications to iOS and Google Play stores.</li>
-                                <b>Required Experience, Skills and Qualifications</b>
-                                <li>Knowledge of computer programming, Proffered Javascript and Android development</li>
-                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <div className="career-section-collapsedata-inside mt-3">
+                    <div className="career-section-collapsedata-inside mt-3">
                     <p>
-                        <a class="btn" data-toggle="collapse" data-target="#collapseExample_Flutter" aria-expanded="false" aria-controls="collapseExample">
-                            Flutter Android Developer
-                        </a>
+                        <h4 class="panel-title">
+                            <a class="btn collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseExample_Flutter" aria-expanded="false" aria-controls="collapseExample">
+                                Flutter Android Developer
+                            </a>
+                        </h4>
                     </p>
-                    <div class="collapse" id="collapseExample_Flutter">
+                    <div class="collapse" id="collapseExample_Flutter" data-parent="#accordion">
                         <div class="card card-body">
                             <div className="row inside">
                                 <div className="col-sm-4 pt-1">
@@ -340,14 +369,17 @@ const Career = () => {
                                 <li>Experience with third-party libraries and APIs</li>
                                 <b>Benefits</b>
                                 <li>Yes, we will provide 3 months training of Flutter Android Development.</li>
+                                <li style={{listStyle:'none',float:'right',fontWeight:'bold'}}><a  style={{background:'none',textDecoration:'none',color:'#75dbb3'}}  href="#call_apply_form">Apply Now >></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+
+                </div>
+
             </div>
 
-            <div className="career-section-apply mb-4">
+            <div className="career-section-apply mb-4" id="call_apply_form">
                 <h1>Apply Now</h1>
                 <form>
                 {error && <p style={{color:'red'}}> {error} </p>}

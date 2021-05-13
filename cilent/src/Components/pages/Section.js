@@ -1,8 +1,121 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Slider from '../Layout/Slider';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+import jQuery from 'jquery';
+import axios from 'axios';
+import moment from 'moment';
+import { NavLink } from 'react-router-dom';
 
 
 const Section = () =>{
+
+  const [blog_data,set_blog_data] = useState([]); // blog
+    
+
+  useEffect(()=>{
+
+    const $ = window.$;
+    $('.Count').each(function () {
+      var $this = $(this);
+      jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+          duration: 5000,
+          easing: 'swing',
+          step: function () {
+              $this.text(Math.ceil(this.Counter));
+          }
+      });
+    });
+
+    load_blog();// load blog data
+
+  },[])
+
+  // blog load
+  const load_blog = async () =>{
+    await axios.get('/Blogdata/new_Blog')
+    .then((res)=>{
+        console.log("data",res);
+        set_blog_data(res.data);
+    })
+    .catch((err)=>{
+        console.log("error",err);
+    })
+  }
+
+  const options = {
+    margin: 10,
+    loop:true,
+    responsiveClass: true,
+    nav: false,
+    dots: false,
+    autoplay:true,
+    autoplayTimeout:4000,
+    // navText: ["Prev", "Next"],
+    smartSpeed: 2000,
+    autoplayHoverPause:true,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        400: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        700: {
+            items: 2,
+        },
+        1000: {
+            items: 2,
+        },
+        1200: {
+          items: 3,
+        },
+        1400: {
+          items: 3,
+      }
+    },
+  };
+
+  const new_options = {
+    margin: 0,
+    loop:true,
+    responsiveClass: true,
+    nav: false,
+    dots: false,
+    // animateOut: 'slideOutDown',
+    // animateIn: 'flipInX',
+    // navText: ["Prev", "Next"],
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    smartSpeed: 2000,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        400: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        700: {
+            items: 2,
+        },
+        1000: {
+            items: 2,
+        },
+        1400: {
+          items: 2,
+      }
+    },
+  };
+
   return(
     <>
      <Slider/>
@@ -124,29 +237,74 @@ const Section = () =>{
 
       <div className="row" id="no-data">
         <div className="col-sm-3" id="no-count">
-          <h3>664</h3>
+          <h3 className="Count">664</h3>
           <i class="fal fa-horizontal-rule fa-9x"></i>
           <h3>Clients</h3>
         </div>
         <div className="col-sm-3" id="no-count">
-          <h3>11</h3>
+          <h3 className="Count">11</h3>
           <i class="fal fa-horizontal-rule fa-9x"></i>
           <h3>Years Of Experience</h3>
         </div>
         <div className="col-sm-3" id="no-count">
-          <h3>12</h3>
+          <h3 className="Count">12</h3>
           <i class="fal fa-horizontal-rule fa-9x"></i>
           <h3>Awards</h3>
         </div>
         <div className="col-sm-3" id="no-count">
-          <h3>883</h3>
+          <h3 className="Count">883</h3>
           <i class="fal fa-horizontal-rule fa-9x"></i>
           <h3>Projects Completed</h3>
         </div>
       </div>
 
-      <div className="row mt-5" id="Main-section-Blog">
-        <div className="col-sm-6" id="Main-section-Blog-left">
+      <div className="mt-5" id="Main-section-Blog">
+        
+      <OwlCarousel className='owl-theme' {...new_options}>
+        
+        <div id="Main-section-Blog-inside">
+          <div id="Main-section-Blog-inside-top">
+            <img src="/Images/testimonial/Premila-Sharan.jpg"/>
+            <h1>- Pramila Sharan (IRS), Additional Director General, NIFT,</h1>
+            <p>Ministry of Textiles, Government of INDIA</p>
+          </div>
+
+          <div className="Main-section-Blog-inside-bottom">
+            <p>" The Admission Department of National Institute of Fashion Technology (NIFT)
+              Head office appreciates the effective and timely contribution by the company to the
+              entire process making it a resounding success. "
+            </p>
+          </div>
+        </div>
+
+        <div id="Main-section-Blog-inside">
+          <div id="Main-section-Blog-inside-top">
+            <img src="/Images/testimonial/Professor-Errol-Dsouza-1.jpg" />
+            <h1>- Errol D'souza, IIM-A director,</h1>
+            <p>Indian Institute of Management (IIM) – Ahmedabad</p>
+          </div>
+
+          <div className="Main-section-Blog-inside-bottom">
+            <p>" The quality standards, dedication and sincerity demonstrated by the team at Infilon
+                were of high standards and we appreciate the same "</p>
+          </div>
+        </div>
+
+        <div id="Main-section-Blog-inside">
+          <div id="Main-section-Blog-inside-top">
+            <img src="/Images/testimonial/Pramod-Kumar-Sharma.jpg" />
+            <h1>- Pramod Kumar Sharma, Program coordinator, Paryavan mitra,</h1>
+            <p>Ministry of Environment and Forest, Government of INDIA</p>
+          </div>
+
+          <div className="Main-section-Blog-inside-bottom">
+            <p>" I would like to congratulate you and your team in particular for successful development and implementation of our website “paryavaran mitra” which is a program of Centre for Environmental Education. "</p>
+          </div>
+        </div>
+
+      </OwlCarousel>
+
+        {/* <div className="col-sm-6" id="Main-section-Blog-left">
           <div id="blog">
             <div className="Main-section-Blog-inside-left-top">
                 <img src="/Images/Premila-Sharan.jpg"/>
@@ -160,6 +318,7 @@ const Section = () =>{
             </div>
           </div>
         </div>
+        
         <div className="col-sm-6" id="Main-section-Blog-right">
           <div id="blog2">
             <div className="Main-section-Blog-inside-left-top">
@@ -172,59 +331,91 @@ const Section = () =>{
                   were of high standards and we appreciate the same</p>
             </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
 
       <h1 id="SOME">Latest Blog</h1>
       <h3 className="mt-3">in information technology world</h3>
       <div className="row mt-5 mb-5" id="Main-section-Latest-blog">
-      
-        <div id="Main-section-Latest-blog-inside-post">
-          <img src="/Images/blog/b1.jpg" />
-          <h5>Some Reasons Why Businesses Need Social Media Marketing</h5>
-          <p>
-          Some Reasons Why Businesses Need Social Media Marketing Social media marketing is one of the most powerful tools in digital marketing
-          </p>
-          <div className="row Main-section-Latest-blog-line">
-            <div className="text-left ml-3">
-              <h6>Post by: admin</h6>
-            </div>&nbsp;&nbsp;
-            <div className="text-right">
-            <h6>April 23, 2021</h6>
+
+        {/* <OwlCarousel className='owl-theme' {...options}> */}
+          
+          
+        {blog_data.map((blog_item,key)=>(
+                    
+          <div id="Main-section-Latest-blog-inside-post">
+            
+            <a href={`/Blog_inside/${blog_item._id}`}>
+              { blog_item.blog_image == "" ? "" : <img src={'/Images/blog/' + blog_item.blog_image}/> }
+            </a>
+            
+            <h5><a href={`/Blog_inside/${blog_item._id}`} style={{fontSize:'18px'}} id="blog-post-a">{blog_item.blog_title}</a></h5>
+            <p>
+            {blog_item.blog_content.substr(0, 135)} […]
+            </p>
+            <div className="row Main-section-Latest-blog-line">
+              <div className="text-left ml-3">
+                <h6>Post by: {blog_item.author}</h6>
+              </div>&nbsp;&nbsp;
+              <div className="text-right">
+                <h6>{moment(blog_item.blog_date).format(' MMMM DD, YYYY')}</h6>
+              </div>
             </div>
           </div>
-        </div>
         
-        <div id="Main-section-Latest-blog-inside-post">
-          <img src="/Images/blog/b2.jpg" />
-          <h5>How to Hiring Professional Magento Developers</h5>
-          <p>
-          Typically, when we start an outlet to sell products, we need a room where they are displayed, a room to
-          </p>
-          <div className="row Main-section-Latest-blog-line">
-            <div className="text-left ml-3">
-              <h6>Post by: admin</h6>
-            </div>&nbsp;&nbsp;
-            <div className="text-right">
-              <h6>April 20, 2021</h6>
+        ))}
+
+
+          {/* <div id="Main-section-Latest-blog-inside-post">
+            <img src="/Images/blog/b1.jpg" />
+            <h5>Some Reasons Why Businesses Need Social Media Marketing</h5>
+            <p>
+            Some Reasons Why Businesses Need Social Media Marketing Social media marketing is one of the most powerful tools in digital marketing
+            </p>
+            <div className="row Main-section-Latest-blog-line">
+              <div className="text-left ml-3">
+                <h6>Post by: admin</h6>
+              </div>&nbsp;&nbsp;
+              <div className="text-right">
+              <h6>April 23, 2021</h6>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="Main-section-Latest-blog-inside-post">
-          <img src="/Images/blog/b3.jpg" />
-          <h5>Some Reasons to Choose Python Framework - Django</h5>
-          <p>
-          Django is a high-level, open-source Python web framework that allows for clean, rapid development and practical design. Now, you are wondering
-          </p>
-          <div className="row Main-section-Latest-blog-line">
-            <div className="text-left ml-3">
-              <h6>Post by: admin</h6>
-            </div>&nbsp;&nbsp;
-            <div className="text-right">
-              <h6>April 12, 2021</h6>
+        
+          <div id="Main-section-Latest-blog-inside-post">
+            <img src="/Images/blog/b2.jpg" />
+            <h5>How to Hiring Professional Magento Developers</h5>
+            <p>
+            Typically, when we start an outlet to sell products, we need a room where they are displayed, a room to
+            </p>
+            <div className="row Main-section-Latest-blog-line">
+              <div className="text-left ml-3">
+                <h6>Post by: admin</h6>
+              </div>&nbsp;&nbsp;
+              <div className="text-right">
+                <h6>April 20, 2021</h6>
+              </div>
             </div>
           </div>
-        </div>
+
+          <div id="Main-section-Latest-blog-inside-post">
+            <img src="/Images/blog/b3.jpg" />
+            <h5>Some Reasons to Choose Python Framework - Django</h5>
+            <p>
+            Django is a high-level, open-source Python web framework that allows for clean, rapid development and practical design. Now, you are wondering
+            </p>
+            <div className="row Main-section-Latest-blog-line">
+              <div className="text-left ml-3">
+                <h6>Post by: admin</h6>
+              </div>&nbsp;&nbsp;
+              <div className="text-right">
+                <h6>April 12, 2021</h6>
+              </div>
+            </div>
+          </div> */}
+
+        {/* </OwlCarousel> */}
       </div>
 
       <div className="pb-5 Main-section-SOME-OF-OUR-CLIENTS">
@@ -258,24 +449,24 @@ const Section = () =>{
               <img src="/Images/social-icons/Logo1.png" />
               <p className="mt-4">
                     Sales<br></br>
-                +91 95100 16999<br></br>
-                +91 99044 69794<br></br>
+                    <a href="tel:+91 95100 16999">+91 95100 16999</a><br></br>
+                    <a href="tel:+91 99044 69794">+91 99044 69794</a><br></br>
               </p>
           </div>
           <div className="Main-section-sm-inside">
               <img src="/Images/social-icons/Logo2.png" />
-              <p className="mt-4">info@infilon.com</p>
+              <p className="mt-4"><a href="mailto:info@infilon.com">info@infilon.com</a></p>
           </div>
           <div className="Main-section-sm-inside">
               <img src="/Images/social-icons/Logo3.png" />
-              <p className="mt-4">infilon</p>
+              <p className="mt-4"><a href="skype:infilon?call">infilon</a></p>
           </div>
           <div className="Main-section-sm-inside">
               <img src="/Images/social-icons/Logo4.png" />
               <p className="mt-4">
                   Service<br></br>
-              +91 9099 830 350<br></br>
-              +91 8000 230 350<br></br>
+                  <a href="tel:+91 9099 830 350">+91 9099 830 350</a><br></br>
+                  <a href="tel:+91 8000 230 350">+91 8000 230 350</a><br></br>
               </p>
           </div>
         </div>

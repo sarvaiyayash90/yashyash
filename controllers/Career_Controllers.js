@@ -6,6 +6,8 @@ const multer = require('multer'); // Multer one type image upload time call midd
 var fs = require('fs'); // file systems
 
 const career = require('../Models/career_Model');  // student Model
+const Get_Quotation_m = require('../Models/Get_Quotation_Model');  // student Model
+
 
 const nodemailer = require('nodemailer')
 
@@ -35,7 +37,7 @@ const storage = multer.diskStorage({
 });
 
 /*  +--------------------------+
-    |       create data        |
+    |       career data        |
     +--------------------------+  */
 
 router.post('/Career_Apply_Now',(req,res)=>{
@@ -131,6 +133,29 @@ router.post('/Career_Apply_Now',(req,res)=>{
                 // res.status(400).json({ "status": "data Not insert successfully" });
             })
     }); 
+})
+
+/*  +---------------------------------+
+    |       get quotation data        |
+    +---------------------------------+  */
+router.post('/Get_Quotation',(req, res) => {
+
+    const Get_Quotation_new = new Get_Quotation_m({
+        name: req.body.name,
+        select_website_type: req.body.select_website_type,
+        select_budget_type: req.body.select_budget_type,
+        email: req.body.email,
+        moblie_no: req.body.moblie_no,
+        select_reference: req.body.select_reference,
+    })
+
+    Get_Quotation_new.save()
+    .then(result => {
+        res.status(200).send();
+    }).catch(err => {
+        res.status(400).json({ message: "data Not insert successfully" });
+    })
+
 })
 
 

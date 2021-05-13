@@ -52,8 +52,9 @@ import OXID_Development from './Components/pages/OXID_Development';
 import Open_Source_Services from './Components/pages/Open_Source_Services';
 import Domain_Hosting from './Components/pages/Domain_Hosting';
 import BULK_SMS_EMAIL from './Components/pages/BULK_SMS_EMAIL';
-
-
+import Blog from './Components/pages/Blog';
+import Blog_inside from './Components/pages/Blog_inside';
+import category_blog from './Components/pages/category_blog';
 
 
 
@@ -133,6 +134,9 @@ function App() {
               <Route exact path="/Open_Source_Services" component={Open_Source_Services} />
               <Route exact path="/Domain_Hosting" component={Domain_Hosting} />
               <Route exact path="/BULK_SMS_EMAIL" component={BULK_SMS_EMAIL} />
+              <Route exact path="/Blog" component={Blog} />
+              <Route exact path="/Blog_inside/:id" component={Blog_inside} />
+              <Route exact path="/category/:id" component={category_blog} />
             </Switch>
             <Footer/>
           </Router>

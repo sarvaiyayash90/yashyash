@@ -11,8 +11,8 @@ const Footer = () => {
                 <div class="col-sm-6">
                 <p>Hire Dedicated Resources</p>
                 </div>
-                <div class="col-sm-6">
-                <button>HIRE NOW</button>
+                <div class="col-sm-6 hire-now">
+                <button><a href="/Get_Quotation" style={{textDecoration:'none',color:'#75DBB3'}}>HIRE NOW</a></button>
                 </div>
             </div>
             <div className="row Main-section-Quick-Links">
@@ -188,7 +188,7 @@ const Footer = () => {
                             {/* <NavLink  style={{textDecoration:'none'}} exact to={`/`}>
                                 <i class="fal fa-chevron-right"></i>&nbsp;Blog
                             </NavLink> */}
-                            <a href="" style={{textDecoration:'none'}} >
+                            <a href="/Blog" style={{textDecoration:'none'}} >
                                 <i class="fal fa-chevron-right"></i> Blog
                             </a>
                         </li>
