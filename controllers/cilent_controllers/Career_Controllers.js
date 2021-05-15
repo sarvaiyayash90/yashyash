@@ -88,7 +88,7 @@ router.post('/Career_Apply_Now',(req,res)=>{
                         attachments: [
                             {
                                 filename:`${result[0].resume}`, // <= Here: made sure file name match
-                                path: path.join(__dirname, `../../pdf_uploads//${result[0].resume}`), // <= Here
+                                path: path.join(__dirname, `../../pdf_uploads/${result[0].resume}`), // <= Here
                                 contentType: 'application/pdf'
                             }
                         ]
