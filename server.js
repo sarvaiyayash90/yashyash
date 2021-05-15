@@ -31,12 +31,13 @@ var session = require('express-session');
     app.use(bodyparser.urlencoded({ extended:false }));
     app.use(bodyparser.json());
 
+    app.use(express.static(path.join(__dirname,'pdf_uploads')));
+
     app.use(express.static(path.join(__dirname,'cilent_build')));
 
     app.use('/adminpanel',express.static(path.join(__dirname,'admin_build')));
 
-    app.use(express.static(path.join(__dirname,'pdf_uploads')));
-
+    
     // app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
     app.use(cors());
     app.use(cookieParser());
