@@ -27,7 +27,7 @@ var transport = nodemailer.createTransport({
 // multer photo upload
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../../pdf_uploads/');
+        cb(null, 'pdf_uploads/');
     },
     filename: function (req, file, cb) {
         // photo_name = Date.now() + path.extname(file.originalname)
@@ -88,7 +88,7 @@ router.post('/Career_Apply_Now',(req,res)=>{
                         attachments: [
                             {
                                 filename:`${result[0].resume}`, // <= Here: made sure file name match
-                                path: path.join(__dirname, `../../pdf_uploads/${result[0].resume}`), // <= Here
+                                path: path.join(__dirname, `../../pdf_uploads//${result[0].resume}`), // <= Here
                                 contentType: 'application/pdf'
                             }
                         ]
