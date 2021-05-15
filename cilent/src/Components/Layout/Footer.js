@@ -243,27 +243,29 @@ const Footer = () => {
             </div>
 
             <div className="row Main-section-footer">
-            <p>  © 2021 Infilon Technologies Pvt. Ltd. All rights reserved.</p>
-            <img id="foot-img" src="/Images/footer.png" />
-            <div className="row Main-section-footer-inside-icon">
-                <ul>
-                <li>
-                    <a href="https://www.google.com"><i class="fab fa-facebook-square fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.google.com"><i class="fab fa-twitter fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.google.com"><i class="fab fa-google-plus-g fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.google.com"><i class="fab fa-instagram fa-2x"></i></a>
-                </li>
-                </ul>
-            </div>
+                <p>  © 2021 Infilon Technologies Pvt. Ltd. All rights reserved.</p>
+                <img id="foot-img" src="/Images/footer.png" />
+                <div className="row Main-section-footer-inside-icon">
+                    <ul>
+                    <li>
+                        <a href="https://www.google.com"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com"><i class="fab fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com"><i class="fab fa-google-plus-g fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com"><i class="fab fa-instagram fa-2x"></i></a>
+                    </li>
+                    </ul>
+                </div>
+                {/* <a href="https://wa.me/+919904469794" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a> */}
+                {/* <a href="https://web.whatsapp.com/send?phone=+919904469794&text=I am interested in your service contact me" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon fa-spin"></i></a>                 */}
+                <a href="https://web.whatsapp.com/send?phone=919904469794&text=I am interested in your service contact me" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon fa-spin"></i></a>
             </div>
         </div>
-
     );
 }
  

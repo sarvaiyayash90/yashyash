@@ -134,7 +134,7 @@ const Section = () =>{
           <p id="IT-Text">
             Infilon combines skill, understanding, knowledge, talent and experience to produce cutting edge visuals in web designing.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/Responsive_Website_Design">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div className="col-sm-4 mt-5 pl-5 pr-5" id="media-icon-hover">
           <img src="/Images/IT/mobile-App.png" />
@@ -142,7 +142,7 @@ const Section = () =>{
           <p id="IT-Text">
             From your innovative business idea to Intuitive, Appealing & perfect Android and iPhone mobile application development.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/Mobile_App">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div className="col-sm-4 mt-5 pl-5 pr-5" id="media-icon-hover">
           <img src="/Images/IT/seo.png" />
@@ -150,7 +150,7 @@ const Section = () =>{
           <p id="IT-Text">
             We focuses on engaging website visitors naturally and organically to boost Google Ranking to help achieve good ROI of internet marketing campaign.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/SEO">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const Section = () =>{
           <p id="IT-Text">
             Being an Award winning, Business software development company we always deliver success with smile, commitment and dedication.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/Software_Development">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div className="col-sm-4 mt-5 pl-5 pr-5" id="media-icon-hover">
           <img src="/Images/IT/ecommerce.png" />
@@ -169,7 +169,7 @@ const Section = () =>{
           <p id="IT-Text">
             Websites are good but ecommerce sites than earns are even better, we are here to turn your investment into profit making stage.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/Magento">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div className="col-sm-4 mt-5 pl-5 pr-5" id="media-icon-hover">
           <img src="/Images/IT/enter-price.png" />
@@ -177,7 +177,7 @@ const Section = () =>{
           <p id="IT-Text">
             We have team of professional developers who can work on small scale to Multinational ERP Software applications.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/Trusted_ERP">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
 
@@ -188,7 +188,7 @@ const Section = () =>{
           <p id="IT-Text">
             We’re a leading mobile app development company having expertise in React Native. We assist our clients to launch applications on both iOS and Android. We Build React Native Mobile Apps. Rapidly, and with Precision.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/React_Native_App">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div className="col-sm-4 mt-5 pl-5 pr-5" id="media-icon-hover">
           <img src="/Images/IT/bot-1.png" />
@@ -196,7 +196,7 @@ const Section = () =>{
           <p id="IT-Text">
             Chatbots have turned out to be a standout amongst the most enticing platforms in recent times. If you are looking to have a custom Chatbot development, we have the right Chatbot development solutions for you.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/Chatbot">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
         <div className="col-sm-4 mt-5 pl-5 pr-5" id="media-icon-hover">
           <img src="/Images/IT/cloud-computing-1.png" />
@@ -204,7 +204,7 @@ const Section = () =>{
           <p id="IT-Text">
             Improve Business Productivity and Efficiency utilizing our high-end IOT professional services. If you are intending to build your own IOT Application Development Solution, then consider Infilon Technologies as your one-stop solution.
           </p>
-          <a id="fa-right" href="">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
+          <a id="fa-right" href="/IOT">READ MORE <i id="fas-icon" className="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
 
