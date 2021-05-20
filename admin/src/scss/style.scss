@@ -9,3 +9,13 @@
 
 // If you want to add something do it here
 @import "custom";
+
+
+body.swal2-shown > [aria-hidden="true"] {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+  
+body > * {
+    transition: 0.1s filter linear;
+}

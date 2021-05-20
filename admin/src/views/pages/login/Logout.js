@@ -5,10 +5,10 @@ const Logout = () => {
 
     useEffect(()=>{
 
-        axios.post('/admin_logindata/admin_logout')
+        axios.post('http://localhost:5000/admin_logindata/admin_logout')
             .then((res) => {
                 localStorage.removeItem('Auth_check');
-                window.location.href="/adminpanel";
+                window.location.href="/";
             }).catch((error) => {
                 
             })

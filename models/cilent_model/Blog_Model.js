@@ -18,6 +18,9 @@ const blog_schema = new mongoose.Schema({
     },
     author:{
         type:String
+    },
+    blog_status:{
+        type:String
     }
 })
 

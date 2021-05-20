@@ -34,6 +34,52 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavDropdown',
+    name: 'Blog',
+    route: '/blog_Create',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'New Blog',
+        to: '/blog_Create',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Blog List',
+        to: '/Blog_List',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Blog List Delete',
+        to: '/Blog_List_Delete',
+      }
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'User',
+    route: '/user_register',
+    icon: 'cil-puzzle',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'New User',
+        to: '/user_register',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'User List',
+        to: '/user_list',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'User List Delete',
+        to: '/user_list_delete',
+      }
+    ],
+  },
+  {
+    _tag: 'CSidebarNavDropdown',
     name: 'Base',
     route: '/base',
     icon: 'cil-puzzle',

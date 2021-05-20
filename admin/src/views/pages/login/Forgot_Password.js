@@ -17,32 +17,18 @@ import {
 import CIcon from '@coreui/icons-react'
 
 import axios from 'axios';
-
 axios.defaults.withCredentials = true
 
-const Login = () => {
+const Forgot_Password = () => {
 
   const[admin,setAdmin]=useState({
-    username:'',
-    password:''
+    email:'',
   })
 
-  const [passwordShown, setPasswordShown] = useState(false);
-  const [eyeShown, seteyeShown] = useState('');
-  
-  const togglePasswordVisiblity = () => {
-    setPasswordShown(passwordShown ? false : true);
-    if(true === eyeShown){
-      seteyeShown(false)
-    }else{
-      seteyeShown(true)
-    }
-  };
-
-  const {username,password} = admin;
+  const {email} = admin;
 
   const onInputChange = e =>{
-    setAdmin({...admin,[e.target.name]:e.target.value});
+    setAdmin({email:e.target.value});
   }
 
   const [auth,setauth]=useState(false);
@@ -59,41 +45,32 @@ const Login = () => {
     e.preventDefault();
 
     const bodyFormData ={
-      username : username,
-      password : password
+      email : email
     }
-    
-    console.log("data",bodyFormData);
 
-    axios.post('http://localhost:5000/admin_logindata/admin_login',bodyFormData)
+    // console.log("data",bodyFormData);
+
+    axios.post('http://localhost:5000/admin_logindata/forgot_password',bodyFormData)
       .then((res)=>{
-        setauth(true)
-        window.location.href="/"
-        if(res.data.auth_user == true)
-        {
-          localStorage.setItem("Auth_check",res.data.Auth_check)
-          localStorage.setItem("Token_Key",res.data.session)
-        }else{
-          localStorage.setItem("Token_Key",res.data.session)
-          localStorage.setItem("Auth_check",res.data.Auth_check)
-          localStorage.setItem("chk_user",res.data.chk_user)
-        }
+            setauth(true)
+            // alert(res.data.message)
+            seterror(res.data.message)
+            setTimeout(()=>{
+              seterror("")
+              window.location.reload()
+              // window.location.href="/#/forgot_password"
+            },3000);
+            //window.location.href="/#/forgot_password"
+            // window.location.reload()
       }).catch((err)=>{
           if (err.response && err.response.data) {
-            console.log(err.response.data.message) // some reason error message
+            // console.log(err.response.data.message) // some reason error message
             seterror(err.response.data.message)
             setTimeout(()=>{
               seterror("")
-              // window.location.href="/adminpanel"
-              window.location.href="/"
+              window.location.href="/#/forgot_password"
             },2000);
           }
-          // seterror("Incorrect Username and/or Password!")
-          // //seterror(err.message)
-          // setTimeout(()=>{
-          //   seterror("")
-          //   window.location.href="/login"
-          // },2000);
       })
   }
 
@@ -106,7 +83,7 @@ const Login = () => {
               <CCard className="p-4">
                 <CCardBody>
                   <CForm>
-                    <h1>Login</h1>
+                    <h1>Forgot password</h1>
                     <p className="text-muted">Sign In to your account</p>
                     {error && <p style={{color:'red'}}> {error} </p>}
                     <CInputGroup className="mb-3">
@@ -116,18 +93,18 @@ const Login = () => {
                         </CInputGroupText>
                       </CInputGroupPrepend>
                       <CInput type="text" 
-                        placeholder="Username" 
-                        autoComplete="username" 
-                        name="username"
-                        value={username}
+                        placeholder="Example@gmail.com" 
+                        autoComplete="email" 
+                        name="email"
+                        value={email}
                         onChange={e => onInputChange(e) }
                         onKeyDown={handleKeypress}
                       />
                     </CInputGroup>
-                    <CInputGroup className="mb-4">
+                    {/* <CInputGroup className="mb-4">
                       <CInputGroupPrepend>
                         <CInputGroupText>
-                          {/* <CIcon name="cil-lock-locked" /> */}
+                          <CIcon name="cil-lock-locked" />
                           {!eyeShown && <i className="far fa-eye-slash" onClick={togglePasswordVisiblity}></i> } 
                           { eyeShown && <i className="far fa-eye" onClick={togglePasswordVisiblity}></i> }
                         </CInputGroupText>
@@ -140,17 +117,14 @@ const Login = () => {
                         onChange={e => onInputChange(e) }
                         onKeyDown={handleKeypress}
                       />
-                    </CInputGroup>
+                    </CInputGroup> */}
                     <CRow>
-                      <CCol xs="6">
-                      {/* {!eyeShown && <i className="far fa-eye-slash" onClick={togglePasswordVisiblity}></i> } 
-                      { eyeShown && <i className="far fa-eye" onClick={togglePasswordVisiblity}></i> }
-                      {"  "}  */}
-                      {!auth && <CButton color="primary" className="px-4" onClick={ e =>onhandlesubmit(e) } >Login</CButton> }
-                      { auth && <CButton color="success" variant="outline" className="px-4" onClick={ e =>onhandlesubmit(e) } disabled >Please Wait Login</CButton> }
+                      <CCol xs="10" className="text-left">
+                        {!auth && <CButton color="primary" className="px-4" onClick={ e =>onhandlesubmit(e) } >Submit</CButton> }
+                        { auth && <CButton color="success" variant="outline" className="px-4" disabled >Please Wait Your Email Is verifiy...</CButton> }
                       </CCol>
-                      <CCol xs="6" className="text-right">
-                        <Link to="/forgot_password"><CButton color="link" style={{textDecoration:'none'}} className="px-0">Forgot password?</CButton></Link>
+                      <CCol xs="2" className="text-right">
+                        <Link to="/login"><CButton color="link" style={{textDecoration:'none'}} className="px-0">SignIn</CButton></Link>
                       </CCol>
                     </CRow>
                   </CForm>
@@ -176,4 +150,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Forgot_Password

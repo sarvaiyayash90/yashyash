@@ -5,7 +5,16 @@ const Login_schema = new mongoose.Schema({
     {
         type:String,
     },
+    fullname:{
+        type:String,
+    },
     email:{
+        type:String,
+    },
+    contact_no:{
+        type:String,
+    },
+    profile_img:{
         type:String,
     },
     password:{
@@ -14,7 +23,16 @@ const Login_schema = new mongoose.Schema({
     Token:{
         type:String
     },
+    resetToken:{    
+        type:String
+    },
+    expireToken:{
+        type:String
+    },
     status:{
+        type:String
+    },
+    login_type:{
         type:String
     }
 })

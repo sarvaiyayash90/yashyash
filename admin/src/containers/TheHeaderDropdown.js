@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import {useHistory} from 'react-router-dom'
 import {
   CBadge,
   CDropdown,
@@ -9,8 +10,42 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
+
+import axios from 'axios';
+
+
 const TheHeaderDropdown = () => {
+
+  const history = useHistory()
+
+  const [users, setUsers] = useState({})
+  useEffect(() => {
+    
+    load_user_data();
+
+  }, [])
+
+  const load_user_data = async ()  =>{
+    await axios.get(`http://localhost:5000/admin_userdata/User_view/${localStorage.getItem('Token_Key')}`).then(resu=>{
+      setUsers(resu.data)
+      // console.log("sasa",resu.data)
+    }).catch(err=>{
+      console.log(err);
+    })
+  }
+
+  const userProfile = () =>{
+    history.push(`/user_profile`)
+  }
+
+  const user_logout = () =>{
+    history.push(`/Logout`)
+  }
+
+  const chk_user_data = localStorage.getItem('chk_user')
+
   return (
+    
     <CDropdown
       inNav
       className="c-header-nav-items mx-2"
@@ -18,11 +53,26 @@ const TheHeaderDropdown = () => {
     >
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
+          
+          { users.login_type === "User" ?
           <CImg
+            src={'/uploads/User_img/' + users.profile_img}
+            className="c-avatar-img"
+            alt="admin@bootstrapmaster.com"
+            style={{width:'100%',height:'100%'}}
+          />
+          
+          : <CImg
             src={'avatars/6.jpg'}
             className="c-avatar-img"
             alt="admin@bootstrapmaster.com"
-          />
+          /> }
+
+          {/* <CImg
+            src={'avatars/6.jpg'}
+            className="c-avatar-img"
+            alt="admin@bootstrapmaster.com"
+          /> */}
         </div>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
@@ -62,9 +112,11 @@ const TheHeaderDropdown = () => {
         >
           <strong>Settings</strong>
         </CDropdownItem>
-        <CDropdownItem>
-          <CIcon name="cil-user" className="mfe-2" />Profile
-        </CDropdownItem>
+
+        { chk_user_data ? '' : <CDropdownItem onClick={userProfile}>
+          <CIcon name="cil-user"  className="mfe-2" />Profile
+        </CDropdownItem> }
+        
         <CDropdownItem>
           <CIcon name="cil-settings" className="mfe-2" />
           Settings
@@ -80,9 +132,8 @@ const TheHeaderDropdown = () => {
           <CBadge color="primary" className="mfs-auto">42</CBadge>
         </CDropdownItem>
         <CDropdownItem divider />
-        <CDropdownItem>
-          <CIcon name="cil-lock-locked" className="mfe-2" />
-          Lock Account
+        <CDropdownItem onClick={user_logout}>
+          <CIcon name="cil-arrow-right" className="mfe-2" />Logout
         </CDropdownItem>
       </CDropdownMenu>
     </CDropdown>

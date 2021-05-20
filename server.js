@@ -21,9 +21,11 @@ var session = require('express-session');
     |     Admin controllers Start       |
     +-----------------------------------+  */
 
-    const login_controllers = require('./controllers/admin_controllers/login_controllers')  
-
-
+    const login_controllers = require('./controllers/admin_controllers/login_controllers') 
+    const Admin_Blog_controllers = require('./controllers/admin_controllers/Admin_Blog_controllers')
+    const Admin_User_Controller = require('./controllers/admin_controllers/Admin_User_Controller')
+    const Admin_User_Permission_Controller = require('./controllers/admin_controllers/Admin_User_Permission_Controller')
+    
 // ========== ( Admin controllers End ) ==========
 
     var app = express();
@@ -31,15 +33,15 @@ var session = require('express-session');
     app.use(bodyparser.urlencoded({ extended:false }));
     app.use(bodyparser.json());
 
-    app.use(express.static(path.join(__dirname,'pdf_uploads')));
+    app.use(express.static(path.join(__dirname,'main')));
 
     app.use(express.static(path.join(__dirname,'cilent_build')));
 
     app.use('/adminpanel',express.static(path.join(__dirname,'admin_build')));
 
     
-    // app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
-    app.use(cors());
+    app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
+    // app.use(cors());
     app.use(cookieParser());
 
     //app.set('trust proxy', 1) // trust first proxy
@@ -66,6 +68,9 @@ var session = require('express-session');
     +-----------------------------+  */
 
     app.use('/admin_logindata',login_controllers);  // admin login controller
+    app.use('/admin_blogdata',Admin_Blog_controllers);  // admin Blog controller
+    app.use('/admin_userdata',Admin_User_Controller);  // admin user controller
+    app.use('/admin_permissiondata',Admin_User_Permission_Controller);  // admin user permission controller
     
 // ========== ( Admin Routes End ) ==========
 
